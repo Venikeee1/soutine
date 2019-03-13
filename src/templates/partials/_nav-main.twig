@@ -1,0 +1,63 @@
+<div class="nav-main">
+  <div class="nav-main__link-cols-wrapper">
+    <div class="nav-main__links-col">
+      <header class="nav-main__col-header">
+        <h1>Services</h1>
+        {% include '../svg/_icon-arrow-down.twig' %}
+      </header>
+      <ul>
+        <li><a href="enterprise-services.html">Enterprise Services</a></li>
+        <li><a href="startup-services.html">Startup Services</a></li>
+        <li><a href="appearances-services.html">Appearances</a></li>
+        <li><a href="portfolio-enterprise-clients.html">Portfolio</a></li>
+      </ul>
+    </div>
+    <div class="nav-main__links-col">
+      <header class="nav-main__col-header">
+        <h1>About Us</h1>
+        {% include '../svg/_icon-arrow-down.twig' %}
+      </header>
+      <ul>
+        <li><a href="our-team.html">Our Team</a></li>
+        <li><a href="in-the-press.html">In The Press</a></li>
+        <li><a href="partners.html">Partners</a></li>
+      </ul>
+    </div>
+    <div class="nav-main__links-col">
+      <header class="nav-main__col-header">
+        <h1>Insights</h1>
+        {% include '../svg/_icon-arrow-down.twig' %}
+      </header>
+      <ul>
+        <li><a href="our-blog.html">Blog</a></li>
+        <li><a href="our-newsletter.html">Newsletter</a></li>
+        <li><a href="research-papers.html">Research Papers</a></li>
+      </ul>
+    </div>
+    <div class="nav-main__links-col">
+      <header class="nav-main__col-header">
+        <h1>Contact Us</h1>
+        {% include '../svg/_icon-arrow-down.twig' %}
+      </header>
+      <ul>
+        <li><a href="our-contacts.html">Contact Form</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="imprint.html">Imprint</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="nav-main__subscribe-wrapper">
+    <label class="nav-main__subscribe-form=label" for="subscribe-input"><b>Subscribe</b> to Our Newsletter</label>
+    <form>
+      <input type="hidden" name="form" value="newsletter">
+      <input type="text" value="" name="require_attention" tabindex="-1" style="position: absolute !important; left: -10000px;">
+      <label class="nav-main__subscribe-checkbox-label">
+        <input type="checkbox" required="required">
+        <i class="checkmark"></i>
+        <span>I agree to the <a href="privacy-policy.html" target="_blank">Privacy Policy</a></span>
+      </label>
+      <input id="subscribe-input" name="email" type="email" placeholder="Email">
+      <button class="button" type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>

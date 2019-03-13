@@ -1,0 +1,200 @@
+.page-custom-scroll {
+  position: relative;
+
+  @media (max-width: $lg) {
+    position: static;
+    height: auto;
+  }
+
+  &__block-fixed {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    right: calc(50% + 225px);
+
+    @media (max-width: $lg) {
+      position: relative;
+      height: auto;
+    }
+  }
+
+  &__block-fixed-background {
+    height: 100%;
+
+    @media (max-width: $lg) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    div { //block for image, url past inline, look in HTML
+      width: 100%;
+      height: calc(100% + 50px);
+
+      @media (max-width: $lg) {
+        height: 100%;
+      }
+    }
+  }
+
+  &__block-fixed-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 485px;
+    max-width: 100%;
+    height: 100%;
+    padding-left: rem-calc($container-padding);
+    display: flex;
+
+    @media (max-width: $lg) {
+      position: relative;
+      height: auto;
+      padding: 100px rem-calc($container-padding) 0;
+      width: 830px;
+      margin: 0 auto;
+    }
+  }
+
+  &__block-to-scroll {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+    @media (max-width: $lg) {
+      position: static;
+    }
+  }
+
+  &__block-to-scroll-content {
+    width: calc(50% + 225px);
+    margin-left: auto;
+    padding: rem-calc(153) 30px 0;
+
+    @media (max-width: $lg) {
+      margin-left: 0;
+      width: 100%;
+      padding: 30px 0 0 !important;
+    }
+
+    @media (max-height: $nav-break-height) {
+      padding: 108px 30px 0;
+    }
+  }
+
+  &__scroll-container {
+    position: relative;
+    height: 100%;
+    margin: 0 $full-container-margin;
+
+    @media (max-width: 1920px) {
+      margin: 0 auto;
+      padding: 0 50px;
+      width: 1809px;
+      max-width: 100%;
+    }
+  }
+
+  &__scroll-buttons {
+    position: fixed;
+    z-index: 4;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    display: block;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity $time;
+
+    &.visible {
+      pointer-events: auto;
+      opacity: 1;
+
+      @media (max-width: $lg) {
+        display: none;
+      }
+    }
+  }
+
+  &__scroll-buttons-inner {
+    position: absolute;
+    bottom: 60px;
+    right: -5px;
+    font-size: 0;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1920px) {
+      right: rem-calc(45);
+    }
+
+    @media (max-width: $xxl) {
+      right: rem-calc(30);
+    }
+
+    button {
+      margin-top: 3px;
+    }
+  }
+
+  &__scroll-indicator {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    @media (max-width: $lg) {
+      display: none;
+    }
+  }
+
+  &__scroll-indicator-container {
+    position: absolute;
+    top: 180px;
+    right: 10px;
+    bottom: 260px;
+    width: 2px;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $time;
+
+    @media (max-width: 1920px) {
+      right: rem-calc(60);
+    }
+
+    @media (max-width: $xxl) {
+      right: rem-calc(45);
+    }
+
+    &.visible {
+      opacity: 1;
+    }
+
+    i {
+      display: block;
+      position: absolute;
+      padding-top: 80px;
+      box-sizing: content-box;
+      top: 0;
+      width: 100%;
+      height: 0;
+      background: $brand-color-1;
+    }
+  }
+
+  &__footer {
+    display: none;
+
+    @media (max-width: $lg) {
+      display: block;
+    }
+  }
+}

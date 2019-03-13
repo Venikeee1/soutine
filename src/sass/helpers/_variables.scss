@@ -1,0 +1,36 @@
+//colors
+$brand-color-1: #00263e;
+$brand-color-2: #00b5e2;
+$brand-color-3: #fff;
+$brand-color-4: #f5f6f7;
+$brand-color-5: #bbc5cc;
+$brand-color-6: #e5e9eb;
+
+//fonts
+$brand-font-1: 'GTWalsheim', Helvetica, Arial, Sans-Serif;
+$brand-font-2: 'LibreFranklin', Helvetica, Arial, Sans-Serif;
+
+//sises
+
+$full-container-margin: 5.5%;
+$container-width: 1576px;
+$container-padding: 50px;
+$container-padding-tab: 30px;
+$container-padding-mob: 15px;
+
+$nav-break-height: 809px;
+
+$sm: 459px;
+$md: 767px;
+$lg: 1023px;
+$xl: 1199px;
+$xxl: 1399px;
+
+//transitions
+$time: 0.2s;
+
+//animations preset
+%internal-page-animate-block {
+  opacity: 0;
+  transform: matrix(1, 0, 0, 1, 0, 50);
+}
