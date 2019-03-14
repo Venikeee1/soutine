@@ -1,6 +1,14 @@
 ---
-title: Bussmann Advisory
+title: craftera digital
 namespace: homepage
+intro:
+  title: solution to grow
+  aboveTitle: Web and mobile
+  underTitle: your business
+aboutUs:
+  title: Who we are
+  subtitle: Digital agency with strong team and great skills
+  description: Our team has experience working with projects of varying complexity from landings to large online stores and mobile apps. You can entrust us with a complete cycle of creating a project for you including design, development and support.
 ---
 
 {% extends 'layouts/_full-page.twig' %}
@@ -9,8 +17,12 @@ namespace: homepage
 
   <div class="fp-swiper-wrapper homepage-swiper swiper-container">
     <div class="swiper-wrapper">
-      <div class="homepage-swiper__item swiper-slide">1</div>
-      <div class="homepage-swiper__item swiper-slide">2</div>
+      <div class="homepage-swiper__item swiper-slide">
+        {% include "pages/homepage/_homepage-intro.twig" %}
+      </div>
+      <div class="homepage-swiper__item swiper-slide">
+        {% include "pages/homepage/_homepage-about-us.twig" %}
+      </div>
       <div class="homepage-swiper__item swiper-slide">3</div>
       <div class="homepage-swiper__item swiper-slide">4</div>
       <div class="homepage-swiper__item swiper-slide">5</div>

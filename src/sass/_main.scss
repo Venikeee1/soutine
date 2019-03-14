@@ -34,16 +34,3 @@ img {
   width: 100%;
   height: auto;
 }
-
-.homepage-swiper {
-  height: 100vh;
-
-  &__item {
-    background: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 100px;
-    color: #fff;
-  }
-}

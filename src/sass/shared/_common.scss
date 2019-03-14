@@ -1,0 +1,22 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.white-color {
+  color: #fff;
+}
+
+.slide-flex-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-title {
+  color: $primary-color;
+  font-size: 62px;
+}
