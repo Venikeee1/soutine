@@ -1,9 +1,11 @@
 .btn {
   display: block;
   text-transform: uppercase;
+  font-size: 30px;
+  cursor: pointer;
 }
 
-.primary-btn {
+.btn--primary {
   text-transform: uppercase;
   border: 2px solid #010e47;
   padding: 10px 45px;

@@ -1,0 +1,45 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+  padding: 0 2.5%;
+  z-index: 500;
+  pointer-events: none;
+
+  &[data-theme="light-theme"] {
+    color: #fff;
+  }
+
+  &[data-theme="dark-theme"] {
+    color: $black-color;
+  }
+
+  &__media {
+    position: relative;
+    width: 1px;
+    height: 1px;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    pointer-events: auto;
+  }
+
+  &__lang {
+    pointer-events: auto;
+  }
+
+  &__media-link {
+    margin-right: 30px;
+  }
+
+  &__lang-item {
+    margin-left: 5px;
+
+    &--active {
+      font-weight: 800;
+    }
+  }
+
+}

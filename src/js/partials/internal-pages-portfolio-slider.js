@@ -6,8 +6,11 @@ export default class {
   }
 
   init() {
-    const slider = new Swiper('.fp-swiper-wrapper', { 
-      mousewheel: true,
+    const slider = new Swiper('.fp-swiper-wrapper', {
+      preventInteractionOnTransition: true,
+      mousewheel: {
+        releaseOnEdges: true
+      },
       direction: 'vertical'
     });
   }

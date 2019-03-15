@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 2.5% 0;
+  z-index: 500;
+  pointer-events: none;
+
+  &__logo {
+    pointer-events: auto;
+    line-height: 1;
+  }
+
+  &__contacts-us {
+    height: 140px;
+    width: 140px;
+    border: 8px solid $primary-color;
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    font-size: 30px;
+    pointer-events: auto;
+    text-transform: uppercase;
+
+    &[data-theme="light-theme"] {
+      color: #fff;
+    }
+
+    &[data-theme="dark-theme"] {
+      color: $black-color;
+    }
+  }
+
+}

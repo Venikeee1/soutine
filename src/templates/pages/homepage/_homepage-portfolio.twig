@@ -1,0 +1,14 @@
+<section class="homepage-portfolio">
+    <div class="homepage-portfolio__inner container">
+        <div class="homepage-portfolio__slider">
+            {% for item in portfolio.list %}
+                <div class="homepage-portfolio__item">
+                    <div class="homepage-portfolio__text">
+                        <h2 class="homepage-portfolio__title">{{ item.title }}</h2>
+                        <p class="homepage-portfolio__description">{{ item.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

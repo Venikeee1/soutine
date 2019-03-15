@@ -1,0 +1,18 @@
+<section class="slide-flex-container homepage-contacts">
+    <div class="homepage-contacts__inner container">
+        <div class="homepage-contacts__info">
+            <div class="homepage-contacts__dash"></div>
+            <a href="/" class="homepage-contacts__link homepage-contacts__tel">{{ contacts.tel }}</a>
+            <a href="/" class="homepage-contacts__link homepage-contacts__mail">{{ contacts.mail }}</a>
+        </div>
+        <form class="homepage-contacts__form form">
+            <h2 class="homepage-contacts__title primary-title">{{ contacts.title }}</h2>
+            <p class="homepage-contacts__description">{{ contacts.description }}</p>
+            <input name="name" type="text" class="form__input" placeholder="Name" required>
+            <input name="tel" type="tel" class="form__input" placeholder="Phone" required>
+            <input name="mail" type="email" class="form__input" placeholder="Email" required>
+            <textarea class="form__input form__textarea" name="message" placeholder="Message"></textarea>
+            <button class="btn btn--primary" type="submit">Send</button>
+        </form>
+    </div>
+</section>
