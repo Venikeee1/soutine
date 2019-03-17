@@ -1,6 +1,7 @@
 import 'gsap/ScrollToPlugin';
 import { TweenMax } from 'gsap/TweenMax';
 import Slider from './partials/internal-pages-portfolio-slider';
+import canvasSpace from './partials/stars-3d';
 import { TimelineLite } from 'gsap/TimelineLite';
 
 window.addEventListener('load', () => {
@@ -11,4 +12,7 @@ window.addEventListener('load', () => {
 
   const slider = new Slider();
   slider.init();
+
+  canvasSpace('.canvas-stars');
+
 });
