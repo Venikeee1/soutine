@@ -26,11 +26,11 @@
     pointer-events: auto;
     text-transform: uppercase;
 
-    &[data-theme="light-theme"] {
+    &[data-theme="light"] {
       color: #fff;
     }
 
-    &[data-theme="dark-theme"] {
+    &[data-theme="dark"] {
       color: $black-color;
     }
   }

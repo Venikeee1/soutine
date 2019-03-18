@@ -24,27 +24,13 @@
 
   &__item {
     display: flex;
+    overflow: hidden;
     position: relative;
-    flex: 0;
-    max-width: 80px;
-    transition: flex 0.8s;
+    width: 0;
+    min-width: 80px;
+    transition: width 0.8s;
     background: url(https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
-    background-size: cover;
-
-    &:first-child,
-    &:hover {
-      flex: 1;
-      padding: 60px;
-      max-width: none;
-
-      .homepage-portfolio__text {
-        opacity: 1;
-      }
-
-      &::before, &::after {
-        opacity: 0;
-      }
-    }
+    background-position: 50% 50%;
 
     &::before {
       content: '';
@@ -72,9 +58,13 @@
     }
 
     &--active {
-      flex: 1;
+      width: 100%;
       padding: 60px;
       max-width: none;
+
+      &::before, &::after {
+        opacity: 0;
+      }
 
       .homepage-portfolio__text {
         opacity: 1;
@@ -91,5 +81,9 @@
     opacity: 0;
     max-width: 650px;
     color: #fff;
+  }
+
+  &__description {
+    color: $primary-color;
   }
 }

@@ -1,25 +1,21 @@
 .logo {
 
-  &__top {
-    font-size: 64px;
-    color: $primary-color;
+  &__svg {
+    height: 100px;
   }
 
-  &__word {
-    line-height: 1;
-    text-transform: uppercase;
+  &__top {
+    fill: $primary-color;
   }
 
   &__bottom {
-    font-size: 55px;
-    margin-top: -0.1em;
 
-    &[data-theme="light-theme"] {
-      color: #fff;
+    &[data-theme="light"] {
+      fill: #fff;
     }
 
-    &[data-theme="dark-theme"] {
-      color: $black-color;
+    &[data-theme="dark"] {
+      fill: $black-color;
     }
   }
 }
