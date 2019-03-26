@@ -19,4 +19,8 @@
 .primary-title {
   color: $primary-color;
   font-size: 62px;
+
+  @include mq($md) {
+    font-size: 40px;
+  }
 }

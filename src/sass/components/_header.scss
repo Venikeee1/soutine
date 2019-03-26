@@ -10,21 +10,40 @@
   z-index: 500;
   pointer-events: none;
 
+  @include mq($md) {
+    padding: 20px 15px;
+  }
+
   &__logo {
     pointer-events: auto;
     line-height: 1;
   }
 
   &__contacts-us {
-    height: 140px;
-    width: 140px;
+    height: 20vh;
+    width: 20vh;
+    min-height: 100px;
+    max-height: 120px;
+    min-width: 100px;
+    max-width: 120px;
     border: 8px solid $primary-color;
     border-radius: 50%;
     background: none;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 20px;
     pointer-events: auto;
     text-transform: uppercase;
+
+    @include mq($md) {
+      height: 75px;
+      width: 75px;
+      min-height: 0;
+      min-width: 0;
+      font-size: 14px;
+      border-width: 6px;
+    }
+
+    // @include mq-h-bp(20px, 4vh, 20px, 'font-size');
 
     &[data-theme="light"] {
       color: #fff;
