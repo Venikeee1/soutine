@@ -11,6 +11,14 @@ window.addEventListener('load', () => {
     display: 'none'
   });
 
+  function setWrapperHeight() {
+      document.querySelector('.homepage-swiper').style.height = window.innerHeight + 'px';
+  }
+
+  window.addEventListener('resize', setWrapperHeight)
+
+
+
   const slider = new Slider();
   const portfolioSlider = new PortfolioSlider();
 

@@ -1,7 +1,36 @@
 .homepage-prices {
-  width: 100%;
   display: flex;
   font-size: 40px;
+
+  @include mq(1800px) {
+    font-size: 30px;
+  }
+
+  @include mq($xxxl) {
+    font-size: 26px;
+  }
+
+  @include mq(1400px) {
+    width: 90%;
+    max-width: none;
+    padding: 0 80px;
+    margin-top: 80px;
+  }
+
+  @include mq($lg) {
+    flex-wrap: wrap;
+    font-size: 24px;
+    max-width: 670px;
+  }
+
+  @include mq($md) {
+    font-size: 20px;
+  }
+
+  @include mq($sm) {
+    margin-top: 20px;
+    padding: 0 50px;
+  }
 
   &__description {
     position: relative;
@@ -17,6 +46,22 @@
       height: 100%;
       background: $black-color;
     }
+
+    @include mq(1400px) {
+      width: 50%;
+    }
+
+    @include mq($lg) {
+      width: 100%;
+    }
+
+    @include mq($lg) {
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
   }
 
   &__list {
@@ -25,6 +70,34 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &--mobile {
+      display: none;
+
+      @include mq($lg) {
+        display: block;
+      }
+    }
+
+    &--desktop {
+      @include mq($lg) {
+        display: none;
+      }
+    }
+
+    @include mq(1400px) {
+      width: 50%;
+    }
+
+    @include mq($lg) {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 1.5em;
+    }
+
+    @include mq($sm) {
+      font-size: 16px;
+    }
   }
 
   &__title {
@@ -34,15 +107,36 @@
   &__text {
     line-height: 1.3;
     margin-bottom: 30px;
+
+    @include mq($lg) {
+      font-size: 30px;
+    }
+
+    @include mq($md) {
+      font-size: 24px;
+    }
+
+    @include mq($xs) {
+      display: none;
+    }
   }
 
   &__item {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    align-items: flex-end;
+    margin-bottom: 1.5em;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @include mq($lg) {
+      margin-bottom: 0.6em;
+    }
+
+    @include mq($xs) {
+      align-items: center;
     }
   }
 
@@ -52,6 +146,15 @@
     line-height: 1.1;
     flex: 1;
     padding-right: 20px;
+    white-space: nowrap;
+
+    @include mq($sm) {
+      white-space: normal;
+    }
+
+    @include mq($xs) {
+      align-items: center;
+    }
   }
 
   &__label-inner {
@@ -60,12 +163,22 @@
 
   .foo {
     position: relative;
+
+    @include mq($xs) {
+      &::after {
+        content: ':';
+      }
+    }
   }
 
   &__dots {
     position: absolute;
     left: calc(100% + 10px);
     white-space: nowrap;
+
+    @include mq($xs) {
+      display: none;
+    }
   }
 
   &__value {

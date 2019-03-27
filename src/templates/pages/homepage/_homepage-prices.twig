@@ -3,9 +3,24 @@
         <div class="homepage-prices__description">
             <h2 class="homepage-prices__title primary-title">{{ prices.title }}</h2>
             <p class="homepage-prices__text">{{ prices.description }}</p>
+            <ul class="homepage-prices__list homepage-prices__list--mobile">
+                {% for item in prices.list %}
+                    <li class="homepage-prices__item">
+                        <div class="homepage-prices__label">
+                            <div class="homepage-prices__label-inner">
+                        <span class="foo">
+                            {{ item.label }}
+                            <span class="homepage-prices__dots"> . . . . . . . . . . . . . . . . . . . . </span>
+                        </span>
+                            </div>
+                        </div>
+                        <span class="homepage-prices__value">{{ item.price }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
             <button class="btn btn--primary">{{ prices.btnText }}</button>
         </div>
-        <ul class="homepage-prices__list">
+        <ul class="homepage-prices__list homepage-prices__list--desktop">
             {% for item in prices.list %}
             <li class="homepage-prices__item">
                 <div class="homepage-prices__label">

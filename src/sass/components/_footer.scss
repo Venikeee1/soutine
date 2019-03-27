@@ -9,6 +9,10 @@
   z-index: 500;
   pointer-events: none;
 
+  @include mq($md) {
+    bottom: 3%;
+  }
+
   &[data-theme="light"] {
     color: #fff;
   }
@@ -21,6 +25,7 @@
     position: relative;
     width: 1px;
     height: 1px;
+    bottom: -1em;
     transform: rotate(-90deg);
     white-space: nowrap;
     pointer-events: auto;
