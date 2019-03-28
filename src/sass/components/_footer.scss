@@ -13,6 +13,14 @@
     bottom: 3%;
   }
 
+  @include mq($lg) {
+    padding: 0 15px;
+  }
+
+  @include mq($lg) {
+    font-size: 16px;
+  }
+
   &[data-theme="light"] {
     color: #fff;
   }

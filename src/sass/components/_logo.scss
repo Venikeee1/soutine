@@ -3,8 +3,16 @@
   &__svg {
     height: 100px;
 
+    @include mq($lg) {
+      height: 80px;
+    }
+
     @include mq($md) {
       height: 65px;
+    }
+
+    @include mq($xs) {
+      height: 40px;
     }
   }
 
@@ -13,7 +21,8 @@
   }
 
   &__bottom {
-
+    transition: fill 0.3s;
+    
     &[data-theme="light"] {
       fill: #fff;
     }

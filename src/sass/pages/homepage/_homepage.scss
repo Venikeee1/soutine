@@ -6,8 +6,16 @@
 
 .homepage-swiper {
   height: 100vh;
+
+  &__item {
+    overflow: hidden;
+  }
 }
 
 .homepage {
   font-size: 30px;
+}
+
+.homepage, .header, .footer {
+  opacity: 0;
 }

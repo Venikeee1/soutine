@@ -22,7 +22,14 @@ export default class {
       },
       on: {
         slideChange: (e) => {
-          const theme = this.swiper.slides[this.swiper.activeIndex].getAttribute('data-active-theme');
+          let theme = this.swiper.slides[this.swiper.activeIndex].getAttribute('data-active-theme');
+          if (theme === 'intro') {
+            if(window.innerWidth < 1200 || window.innerHeight <= 600) {
+              theme = 'light'
+            } else {
+              theme = 'dark'
+            }
+          }
           this.toggleTheme(theme);
         }
       },

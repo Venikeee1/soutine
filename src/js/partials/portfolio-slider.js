@@ -7,7 +7,6 @@ export default class {
     }
 
     portfolioItemClick() {
-        console.log(this.itemList, 213213)
         Array.from(this.itemList).forEach( elem => {
             elem.addEventListener('click', () => {
                 if(this.activeSlide === elem ) return

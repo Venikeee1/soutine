@@ -2,8 +2,14 @@
     <div class="homepage-contacts__inner container">
         <div class="homepage-contacts__info">
             <div class="homepage-contacts__dash"></div>
-            <a href="/" class="homepage-contacts__link homepage-contacts__tel">{{ contacts.tel }}</a>
-            <a href="/" class="homepage-contacts__link homepage-contacts__mail">{{ contacts.mail }}</a>
+            <div class="homepage-contacts__links">
+                <a href="/" class="homepage-contacts__link homepage-contacts__tel">
+                    <span class="homepage-contacts__label--mobile">tel: </span>
+                    {{ contacts.tel }}</a>
+                <a href="/" class="homepage-contacts__link homepage-contacts__mail">
+                    <span class="homepage-contacts__label--mobile">email: </span>
+                    {{ contacts.mail }}</a>
+            </div>
         </div>
         <form class="homepage-contacts__form form">
             <h2 class="homepage-contacts__title primary-title">{{ contacts.title }}</h2>

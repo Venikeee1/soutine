@@ -1,6 +1,18 @@
 .form {
   font-size: 30px;
 
+  @include mq($exl) {
+    font-size:24px;
+  }
+
+  @include mq($xxxl) {
+    font-size: 20px;
+  }
+
+  @include mq($lg) {
+    font-size: 18px;
+  }
+
   &__input {
     display: block;
     width: 100%;
@@ -17,9 +29,21 @@
     &::placeholder {
       font-weight: 300;
     }
+
+    @include mq($lg) {
+      padding: 5px 8px;
+    }
+
+    @include mq($md) {
+      margin-bottom: 8px;
+    }
   }
 
   &__textarea {
     height: 135px;
+
+    @include mq($xs) {
+      height: 100px;
+    }
   }
 }

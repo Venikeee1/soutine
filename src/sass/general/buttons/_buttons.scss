@@ -6,12 +6,13 @@
   border: 2px solid transparent;
   padding: 10px 45px;
 
-  @include mq(1800px) {
+  @include mq($exl) {
     font-size: 18px;
   }
 
   @include mq($md) {
     font-size: 14px;
+    padding: 8px 30px;
   }
 }
 
