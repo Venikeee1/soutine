@@ -1,4 +1,5 @@
 import Swiper from 'swiper/dist/js/swiper';
+import widowStore from '../store/windowStore';
 
 export default class {
   constructor() {
@@ -24,7 +25,7 @@ export default class {
         slideChange: (e) => {
           let theme = this.swiper.slides[this.swiper.activeIndex].getAttribute('data-active-theme');
           if (theme === 'intro') {
-            if(window.innerWidth < 1200 || window.innerHeight <= 600) {
+            if(widowStore.isIntroSlideFullPaged) {
               theme = 'light'
             } else {
               theme = 'dark'

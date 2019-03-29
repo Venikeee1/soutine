@@ -1,14 +1,15 @@
 <section class="homepage-intro__container container">
     <div class="homepage-intro">
-        <div class="canvas-stars"></div>
+        <div class="canvas-stars" ></div>
         <div class="homepage-intro__heading">
-            <div class="homepage-intro__subtitle homepage-intro__subtitle--upper white-color">
+            <div class="homepage-intro__subtitle homepage-intro__subtitle--upper white-color" data-animation="intro">
                 {{ intro.aboveTitle }}
             </div>
-            <h2 class="homepage-intro__title">{{ intro.title }}</h2>
-            <div class="homepage-intro__subtitle homepage-intro__subtitle--down white-color">
+            <h2 class="homepage-intro__title" data-animation="intro">{{ intro.title }}</h2>
+            <div class="homepage-intro__subtitle homepage-intro__subtitle--down white-color" data-animation="intro">
                 {{ intro.underTitle }}
             </div>
+            <div class="homepage-intro__dash"></div>
         </div>
     </div>
 </section>

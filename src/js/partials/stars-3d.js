@@ -14,6 +14,9 @@ export default function (selector) {
         geometry,
         starStuff,
         materialOptions,
+        firstCoordsForMove = -0.1111111111111111,
+        foo = 1000,
+        isAnimationOnMouseAloud = false,
         stars;
 
     init();
@@ -62,9 +65,16 @@ export default function (selector) {
         render();
     }
 
-    function render() {
-        camera.position.x += (mouseX - camera.position.x) * 0.005;
-        camera.position.y += (-mouseY - camera.position.y) * 0.005;
+    function render( ) {
+        if(isAnimationOnMouseAloud) {
+            camera.position.x += (mouseX - camera.position.x) * 0.005;
+            camera.position.y += (-mouseY - camera.position.y) * 0.005;
+        } else {
+            if(foo === 0) isAnimationOnMouseAloud = true
+            foo--;
+            camera.position.x += firstCoordsForMove;
+            camera.position.y += firstCoordsForMove;
+        }
         camera.lookAt(scene.position);
         renderer.render(scene, camera);
     }
@@ -97,7 +107,14 @@ export default function (selector) {
     }
 
     function onMouseMove(e) {
+        isAnimationOnMouseAloud = true
         mouseX = e.clientX - windowHalfX;
         mouseY = e.clientY - windowHalfY;
     }
+
+    return {
+        camera: camera,
+        renderer: renderer,
+        scene: scene
+    };
 }
