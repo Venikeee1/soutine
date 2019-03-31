@@ -1,6 +1,6 @@
 import widowSizes from '../store/windowStore';
 import canvasSpace from './stars-3d';
-
+import widowStore from '../store/windowStore';
 
 export default class {
     constructor() {
@@ -66,8 +66,12 @@ export default class {
         this.tl
             .to(this.preloaderLogo, 0.8, {x: logoLeft, y: logoTop}, '+=1.4')
             .to(this.preloaderLogoSvg, 0.8, {height: newHeight}, '-=0.7')
-            .to(this.bottomPaths, 0.8, {fill: '#000'}, '-=1.3')
+            .to(this.preloaderContainer, 0, {pointerEvents: 'none'})
 
+        if(!widowStore.isIntroSlideFullPaged) {
+            this.tl
+                .to(this.bottomPaths, 0.8, {fill: '#000'}, '-=1.3')
+        }
     }
 
     animateHeader() {
@@ -103,6 +107,12 @@ export default class {
     }
 
     cropPreloaderBg() {
+
+        if(widowStore.isIntroSlideFullPaged) {
+            this.tl.to(this.preloaderBG, 0.6, {opacity: 0})
+            return
+        }
+
         const canvasContainer = document.querySelector('.canvas-stars')
         const proportionX = canvasContainer.clientWidth / this.preloaderBG.clientWidth;
         const proportionY = canvasContainer.clientHeight / this.preloaderBG.clientHeight;
@@ -127,16 +137,7 @@ export default class {
     }
 
     animatePreloader() {
-        const render = canvasSpace('.canvas-stars');
-        const maxFoo = -2.21849553626364522;
-        let foo = 0;
-        let total = 0;
-        let maxTotal = 1000;
-
-        // camera.position.x = ;
-
-        // -0.21849553626364522
-
+        canvasSpace('.canvas-stars');
         this.setLogoToCenter();
         this.setDefaultSettings();
         this.animateWords();

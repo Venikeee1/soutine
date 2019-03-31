@@ -5,6 +5,7 @@
   cursor: pointer;
   border: 2px solid transparent;
   padding: 10px 45px;
+  transition: color 0.3s, border 0.3s;
 
   @include mq($exl) {
     font-size: 18px;
@@ -18,10 +19,20 @@
 
 .btn--light {
   border-color: #fff;
+
+  &:hover, &:focus {
+    border-color: $primary-color;
+    color: $primary-color;
+  }
 }
 
 .btn--dark {
   border-color: $black-color;
+
+  &:hover, &:focus {
+    border-color: $primary-color;
+    color: $primary-color;
+  }
 }
 
 .btn--primary {

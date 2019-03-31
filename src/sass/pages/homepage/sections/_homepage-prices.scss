@@ -37,15 +37,15 @@
     width: 57%;
     padding-right: 60px;
 
-    &::after {
-      content: '';
-      position: absolute;
-      right: 25px;
-      top: 0;
-      width: 6px;
-      height: 100%;
-      background: $black-color;
-    }
+    //&::after {
+    //  content: '';
+    //  position: absolute;
+    //  right: 25px;
+    //  top: 0;
+    //  width: 6px;
+    //  height: 100%;
+    //  background: $black-color;
+    //}
 
     @include mq(1400px) {
       width: 50%;
@@ -53,14 +53,26 @@
 
     @include mq($lg) {
       width: 100%;
-    }
-
-    @include mq($lg) {
       padding-right: 0;
 
       &::after {
         display: none;
       }
+    }
+  }
+
+  &__dash {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: $black-color;
+    transform-origin: 50% 50%;
+    transform: scaleY(0);
+
+    @include mq($lg) {
+        display: none;
     }
   }
 

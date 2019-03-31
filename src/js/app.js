@@ -12,15 +12,17 @@ window.addEventListener('load', () => {
 
   const Header = new HeaderClass();
   const Footer = new FooterClass();
-  const Preloader = new PreloaderClass();
+  // const Preloader = new PreloaderClass();
 
-  Preloader.animatePreloader();
+  //Preloader.animatePreloader();
 
   function setWrapperHeight() {
       document.querySelector('.homepage-swiper').style.height = window.innerHeight + 'px';
   }
 
   window.addEventListener('resize', setWrapperHeight)
+
+  setWrapperHeight();
 
   if(widowStore.isIntroSlideFullPaged) {
     Header.changeTheme('light')
