@@ -2,6 +2,7 @@
 
   &__svg {
     height: 100px;
+    overflow: visible;
 
     @include mq($lg) {
       height: 80px;
@@ -12,6 +13,10 @@
     }
 
     @include mq($sm) {
+      height: 50px;
+    }
+
+    @include mq($xs) {
       height: 40px;
     }
   }

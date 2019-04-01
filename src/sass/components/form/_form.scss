@@ -21,6 +21,11 @@
     padding: 8px 10px;
     margin-bottom: 15px;
     font-size: inherit;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border: 2px solid $primary-color;
+    }
 
     &:last-child {
       margin-bottom: 0;

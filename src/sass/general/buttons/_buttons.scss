@@ -6,6 +6,8 @@
   border: 2px solid transparent;
   padding: 10px 45px;
   transition: color 0.3s, border 0.3s;
+  font-weight: 800;
+  transform-style: preserve-3d;
 
   @include mq($exl) {
     font-size: 18px;
@@ -38,4 +40,17 @@
 .btn--primary {
   border-color: $primary-color;
   color: $primary-color;
+}
+
+.btn-perspective {
+  position: relative;
+  display: flex;
+
+  &__inner {
+    perspective: 200px;
+  }
+
+  &--center {
+    justify-content: center;
+  }
 }

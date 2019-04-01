@@ -33,7 +33,13 @@
     font-size: 20px;
     pointer-events: auto;
     text-transform: uppercase;
-    transition: color 0.3s;
+    transition: color 0.3s, background-color 0.4s;
+    font-weight: 800;
+
+    &:hover {
+      color: #fff;
+      background: $primary-color;
+    }
 
     @include mq($lg) {
       height: 100px;

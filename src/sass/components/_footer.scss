@@ -41,14 +41,25 @@
 
   &__lang {
     pointer-events: auto;
+    transition: color 0.4s;
   }
 
   &__media-link {
     margin-right: 30px;
+    transition: color 0.4s;
+
+    &:hover {
+      color: $primary-color;
+    }
   }
 
   &__lang-item {
     margin-left: 5px;
+    transition: color 0.4s;
+
+    &:hover {
+      color: $primary-color;
+    }
 
     &--active {
       font-weight: 800;

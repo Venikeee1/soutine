@@ -89,10 +89,6 @@ export default class {
             .to('.homepage-intro__dash', 0.5, {scale: 1}, '-=0.4')
     }
 
-    animateFooter() {
-
-    }
-
     setLogoToCenter() {
         const preloaderLogoWidth = this.preloaderLogo.clientWidth;
         const preloaderLogoHeight = this.preloaderLogo.clientHeight;

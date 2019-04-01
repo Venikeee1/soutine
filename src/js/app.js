@@ -7,14 +7,15 @@ import FooterClass from './partials/footer';
 import PreloaderClass from './partials/preloader';
 import widowStore from './store/windowStore';
 import { TimelineLite } from 'gsap/TimelineLite';
+import {btnHovers} from "./partials/btnHovers";
 
 window.addEventListener('load', () => {
 
   const Header = new HeaderClass();
   const Footer = new FooterClass();
-  // const Preloader = new PreloaderClass();
+  const Preloader = new PreloaderClass();
 
-  //Preloader.animatePreloader();
+  Preloader.animatePreloader();
 
   function setWrapperHeight() {
       document.querySelector('.homepage-swiper').style.height = window.innerHeight + 'px';
@@ -34,5 +35,5 @@ window.addEventListener('load', () => {
 
   slider.init();
   portfolioSlider.init();
-
+  btnHovers();
 });

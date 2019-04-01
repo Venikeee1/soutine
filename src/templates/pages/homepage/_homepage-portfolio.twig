@@ -2,11 +2,14 @@
     <div class="homepage-portfolio__inner container">
         <div class="homepage-portfolio__slider">
             {% for item in portfolio.list %}
-                <div class="homepage-portfolio__item {%if loop.first %} homepage-portfolio__item--active {% endif %}">
-                    <div class="homepage-portfolio__text">
-                        <h2 class="homepage-portfolio__title">{{ item.title }}</h2>
-                        <p class="homepage-portfolio__description">{{ item.description }}</p>
+                <div class="homepage-portfolio__item {% if loop.first %} homepage-portfolio__item--active {% endif %}">
+                    <div class="homepage-portfolio__item-inner" style="background-image: url({{ item.img }});">
+                        <div class="homepage-portfolio__text">
+                            <a href="#" class="homepage-portfolio__title animation-item">{{ item.title }}</a>
+                            <p class="homepage-portfolio__description animation-item">{{ item.description }}</p>
+                        </div>
                     </div>
+                    <div class="homepage-portfolio__circle"></div>
                 </div>
             {% endfor %}
         </div>

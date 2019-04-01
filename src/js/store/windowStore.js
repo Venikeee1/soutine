@@ -13,6 +13,9 @@ export default {
     },
     isTablet() {
         return window.innerWidth <= this.breakPoints.lg;
+    },
+    windowHeight() {
+        return window.innerHeight;
     }
 
 }
