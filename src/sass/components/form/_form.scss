@@ -42,7 +42,7 @@
   &__textarea {
     height: 135px;
 
-    @include mq($xs) {
+    @include mq($sm) {
       height: 100px;
     }
   }

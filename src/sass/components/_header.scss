@@ -51,7 +51,7 @@
       border-width: 6px;
     }
 
-    @include mq($xs) {
+    @include mq($sm) {
       font-size: 12px;
       height: 60px;
       width: 60px;

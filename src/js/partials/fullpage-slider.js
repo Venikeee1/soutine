@@ -70,8 +70,8 @@ export default class {
 
     animatePriceList(activeSlide) {
         const animationItems = activeSlide.querySelectorAll('.animation-item');
-        const button = activeSlide.querySelector('.btn')
-        const dash = activeSlide.querySelector('.homepage-prices__dash')
+        const button = activeSlide.querySelector('.btn');
+        const dash = activeSlide.querySelector('.homepage-prices__dash');
         const animationPriceItems = widowStore.isTablet()
             ? activeSlide.querySelectorAll('.homepage-prices__list--mobile .animation-price__item')
             : activeSlide.querySelectorAll('.homepage-prices__list--desktop .animation-price__item')
@@ -88,13 +88,29 @@ export default class {
 
         } else {
             this.timeLine
-                .to(dash, 0.4, {scaleY: 1}, 0.3)
-                .staggerTo([...animationItems, button, ...animationPriceItems, ], 0.8, {y: 0, opacity: 1}, 0.15)
+                .staggerTo([...animationItems, button, ...animationPriceItems, ], 0.8, {y: 0, opacity: 1}, 0.15, 0.3)
+                .to(dash, 0.4, {scaleY: 1}, )
         }
     }
 
     animateContacts(activeSlide) {
-        console.log('contacts.log');
+        const animationItems = activeSlide.querySelectorAll('.animation-item');
+        const animationFormItems = activeSlide.querySelectorAll('.animation-item__form');
+        const dash = activeSlide.querySelector('.homepage-contacts__dash');
+
+        this.timeLine
+        .to(animationItems, 0, {y: 40, opacity: 0})
+        .to(animationFormItems, 0, {y: 40, opacity: 0})
+        .to(dash, 0, {scaleX: 0})
+
+        if(widowStore.isTablet()) {
+            this.timeLine
+                .staggerTo([...animationFormItems, ...animationItems ], 0.8, {y: 0, opacity: 1}, 0.15, 0.3)
+        } else {
+            this.timeLine
+                .to(dash, 0.4, {scaleX: 1}, 0.3)
+                .staggerTo([dash, ...animationItems, ...animationFormItems], 0.8, {y: 0, opacity: 1}, 0.15)
+        }
     }
 
     chooseTheme(theme) {
