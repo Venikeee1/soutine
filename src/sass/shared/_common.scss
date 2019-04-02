@@ -25,6 +25,7 @@
 .primary-title {
   color: $primary-color;
   font-size: 62px;
+  font-weight: 900;
 
   @include mq($lg) {
     font-size: 50px;

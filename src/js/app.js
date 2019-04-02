@@ -6,6 +6,7 @@ import HeaderClass from './partials/header';
 import FooterClass from './partials/footer';
 import PreloaderClass from './partials/preloader';
 import widowStore from './store/windowStore';
+import form from './partials/form';
 import { TimelineLite } from 'gsap/TimelineLite';
 import {btnHovers} from "./partials/btnHovers";
 
@@ -36,4 +37,5 @@ window.addEventListener('load', () => {
   slider.init();
   portfolioSlider.init();
   btnHovers();
+  form();
 });

@@ -1,6 +1,7 @@
 .homepage-prices {
   display: flex;
   font-size: 40px;
+  align-items: center;
 
   @include mq(1800px) {
     font-size: 30px;
@@ -65,8 +66,10 @@
     position: absolute;
     right: 25px;
     top: 0;
+    bottom: 0;
+    margin: auto;
     width: 6px;
-    height: 100%;
+    height: 80%;
     background: $black-color;
     transform-origin: 50% 50%;
     transform: scaleY(0);
@@ -137,7 +140,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.0em;
 
     &:last-child {
       margin-bottom: 0;
@@ -173,7 +176,7 @@
     overflow: hidden;
   }
 
-  .foo {
+  &__semicolon {
     position: relative;
 
     @include mq($xs) {
@@ -196,6 +199,6 @@
   &__value {
     white-space: nowrap;
     flex: 0;
-    font-weight: 800;
+    font-weight: 900;
   }
 }

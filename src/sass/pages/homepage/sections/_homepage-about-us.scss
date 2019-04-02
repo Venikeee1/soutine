@@ -13,7 +13,8 @@
   &__subtitle {
     font-size: 40px;
     margin-top: 0.5em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.3em;
+    line-height: 1.2;
 
     @include mq($xxxl) {
       font-size: 34px;
