@@ -1,15 +1,11 @@
 //libs
-@import "libs/all";
-
-@import 'helpers/all';
+@import "libs/index";
+@import 'helpers/index';
+@import 'shared/index';
+@import 'general/index';
 @import 'main';
 @import 'fonts';
-@import 'shared/index';
 @import 'layouts/all';
 @import 'pages/index';
-@import 'general/index';
 @import 'components/form/form';
-@import 'components/header';
-@import 'components/footer';
-@import 'components/logo';
-@import 'components/preloader';
+@import 'components/index';

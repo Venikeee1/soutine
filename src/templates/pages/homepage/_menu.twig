@@ -1,0 +1,19 @@
+{% import "data/homepage.twig" as homepage %}
+
+<section class="homepage-menu">
+    <div class="container container--bordered">
+        <div class="homepage-menu__inner">
+            <div class="homepage-menu__text text-center">
+                {% for item in homepage.sections.menu %}
+                    <div class="homepage-menu__info">{{ item.info }}</div>
+                    <h2 class="homepage-menu__title primary-title">{{ item.title }}</h2>
+                    <p class="homepage-intro__description body-1">{{ item.description }}</p>
+                    <div class="homepage-intro__spacer">
+                        {% include "svg/_spacer.twig" %}
+                    </div>
+                    <p class="homepage-intro__reservation primary-subtitle">{{ item.subtitle }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
