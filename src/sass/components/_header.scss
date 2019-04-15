@@ -24,7 +24,7 @@
     }
 
     &__item {
-        padding: 8px 55px;
+        padding: 8px 20px;
         font-size: 18px;
         text-transform: uppercase;
         white-space: nowrap;
@@ -42,14 +42,25 @@
             height: 4px;
             background: url("../img/link-left-curve.svg");
             vertical-align: middle;
+            transition: opacity 0.4s;
+            opacity: 0;
+            margin-top: -0.1em;
         }
 
         &::before {
             background: url("../img/link-left-curve.svg");
+            margin-right: 10px;
         }
 
         &::after {
+            margin-left: 10px;
             background: url("../img/link-right-curve.svg");
+        }
+
+        &--active {
+            &::before, &::after {
+                opacity: 1;
+            }
         }
     }
 }
