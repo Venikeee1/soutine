@@ -1,5 +1,48 @@
-<div class="homepage-time">
+{% import "data/homepage.twig" as homepage %}
+
+<article class="homepage-time">
     <div class="container container--bordered">
-        hellooo
+        <div class="homepage-time__inner">
+            <section class="homepage-time__description">
+                <h2 class="primary-title">{{ homepage.sections.workingHours.title }}</h2>
+                <div class="italic">
+                    <div class="homepage-time__schedule">
+                        <div class="homepage-time__item">{{ homepage.sections.workingHours.days }}</div>
+                        <div class="homepage-time__item text-uppercase">{{ homepage.sections.workingHours.hours }}</div>
+                    </div>
+                    <div class="homepage-time__schedule">
+                        <div class="homepage-time__item">{{ homepage.sections.workingHours.weekend }}</div>
+                        <div class="homepage-time__item text-uppercase">{{ homepage.sections.workingHours.weekendHours }}</div>
+                    </div>
+                </div>
+            </section>
+            <section class="homepage-time__clock text-center">
+                <div class="custom-clock">
+                    {% include "svg/_clock.twig" %}
+                    <div class="custom-clock__arrow custom-clock__minute">
+                        {% include "svg/_minute-arrow.twig" %}
+                    </div>
+                    <div class="custom-clock__arrow custom-clock__hour">
+                        {% include "svg/_minute-arrow.twig" %}
+                    </div>
+                </div>
+                <div class="homepage-time__clock-description">
+                    <div>{{ homepage.sections.workingHours.label }}</div>
+                    <div>{{ homepage.sections.workingHours.date }}</div>
+                </div>
+            </section>
+            <section class="homepage-time__description">
+                <h2 class="primary-title">{{ homepage.sections.contacts.title }}</h2>
+                <div class="italic">
+                    <div class="homepage-time__schedule">
+                        <div class="homepage-time__item">{{ homepage.sections.contacts.tel }}</div>
+                        <div class="homepage-time__item">{{ homepage.sections.contacts.email }}</div>
+                    </div>
+                    <div class="homepage-time__schedule">
+                        <div class="homepage-time__item">{{ homepage.sections.contacts.address }}</div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
-</div>
+</article>

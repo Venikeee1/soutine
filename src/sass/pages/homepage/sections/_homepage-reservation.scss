@@ -4,5 +4,56 @@
 
   &__inner {
     min-height: 600px;
+    padding: 130px 0;
+  }
+
+  &__card {
+    padding: 65px 10% 70px;
+  }
+
+  &__more {
+    margin-top: 20px;
+    position: relative;
+
+    &:hover {
+      .homepage-reservation__details {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__details {
+    position: absolute;
+    left: 40%;
+    top: calc(100% + 20px);
+    padding: 50px 40px;
+    max-width: 400px;
+    width: 100%;
+    background: $bg-color;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+  }
+
+  &__more-btn {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.reservation-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 45px;
+
+  &__item {
+    width: 48%;
+    margin-bottom: 50px;
   }
 }

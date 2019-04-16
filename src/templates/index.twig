@@ -5,10 +5,15 @@ title: craftera digital
 {% extends 'layouts/_layuot.twig' %}
 
 {% block content %}
-  <main class="homepage">
-      {% include "pages/homepage/_intro.twig" %}
-      {% include "pages/homepage/_menu.twig" %}
-      {% include "pages/homepage/_reservation.twig" %}
-      {% include "pages/homepage/_time.twig" %}
-  </main>
+    {% include "components/_preloader.twig" %}
+    {% include "components/_header.twig" %}
+
+    <main class="homepage">
+        {% include "pages/homepage/_intro.twig" %}
+        {% include "pages/homepage/_menu.twig" %}
+        {% include "pages/homepage/_reservation.twig" %}
+        {% include "pages/homepage/_time.twig" %}
+
+        {% include "components/_footer.twig" %}
+    </main>
 {% endblock %}

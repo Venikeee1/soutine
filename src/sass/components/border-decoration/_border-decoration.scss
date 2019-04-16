@@ -1,0 +1,32 @@
+.border-decoration {
+    position: relative;
+    padding: 0 12px;
+    border: 2px solid $secondary-color;
+
+    &__elem {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 8px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            height: 2px;
+            width: 100%;
+            background: $secondary-color;
+        }
+
+        &--left {
+            left: 0;
+            border-right: 2px solid $secondary-color;
+        }
+
+        &--right {
+            right: 0;
+            border-left: 2px solid $secondary-color;
+        }
+    }
+}

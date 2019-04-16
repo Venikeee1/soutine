@@ -3,4 +3,96 @@
   &__inner {
     padding: 95px 0 80px;
   }
+
+  &__body {
+    max-width: 840px;
+    margin: 0 auto;
+  }
+
+  &__tabs-wrapper {
+    margin: 0 auto 60px;
+    width: 100%;
+  }
+
+  &__tabs {
+    display: flex;
+    width: 100%;
+    padding: 18px 0;
+  }
+
+  &__tab {
+    width: 33.333%;
+    cursor: pointer;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: rgba($secondary-color, 0.4);
+    border-right: 2px solid rgba($secondary-color,0.2);
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &--active {
+      color: rgba($secondary-color, 1);
+    }
+  }
+
+  &__title {
+    margin: 0 auto 30px;
+    max-width: 485px;
+  }
+
+  &__info{
+    font-size: 18px;
+    line-height: 1.22;
+    margin-bottom: 1em;
+    letter-spacing: 0.02em;
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+
+    &--active {
+      position: relative;
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+}
+
+.menu-slider {
+  max-width: 890px;
+  margin: 90px auto 0;
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+  }
+
+  &__dash {
+    height: 3px;
+    width: 19px;
+    margin: 0 10px;
+    background: $secondary-color;
+    display: block;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: opacity 0.4s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &--active {
+      opacity: 1 !important;
+    }
+  }
 }

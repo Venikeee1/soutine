@@ -3,16 +3,42 @@
 <section class="homepage-menu">
     <div class="container container--bordered">
         <div class="homepage-menu__inner">
-            <div class="homepage-menu__text text-center">
-                {% for item in homepage.sections.menu %}
-                    <div class="homepage-menu__info">{{ item.info }}</div>
-                    <h2 class="homepage-menu__title primary-title">{{ item.title }}</h2>
-                    <p class="homepage-intro__description body-1">{{ item.description }}</p>
-                    <div class="homepage-intro__spacer">
-                        {% include "svg/_spacer.twig" %}
+            <div class="homepage-menu__body">
+                <div class="border-decoration homepage-menu__tabs-wrapper">
+                    <div class="border-decoration__elem border-decoration__elem--left"></div>
+                    <div class="homepage-menu__tabs">
+                        {% for item in homepage.sections.menu %}
+                            <button
+                                    class="homepage-menu__tab text-center {% if loop.first %} homepage-menu__tab--active {% endif %}"
+                            >
+                                {{ item.tab }}
+                            </button>
+                        {% endfor %}
                     </div>
-                    <p class="homepage-intro__reservation primary-subtitle">{{ item.subtitle }}</p>
-                {% endfor %}
+                    <div class="border-decoration__elem border-decoration__elem--right"></div>
+                </div>
+                <div class="homepage-menu__text text-center">
+                    {% for item in homepage.sections.menu %}
+                        <div class="homepage-menu__item {% if loop.first %} homepage-menu__item--active {% endif %}">
+                            <div class="homepage-menu__info">{{ item.info }}</div>
+                            <h2 class="homepage-menu__title primary-title">{{ item.title }}</h2>
+                            <p class="homepage-intro__description body-2">{{ item.description }}</p>
+                            <div class="homepage-intro__spacer">
+                                {% include "svg/_spacer.twig" %}
+                            </div>
+                            <p class="homepage-intro__reservation primary-subtitle">{{ item.subtitle }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="menu-slider">
+                <img class="menu-slider__img" src="./img/menu-slider-img.png" alt="">
+                <div class="menu-slider__pagination">
+                    <button class="menu-slider__dash menu-slider__dash--active"></button>
+                    <button class="menu-slider__dash"></button>
+                    <button class="menu-slider__dash"></button>
+                    <button class="menu-slider__dash"></button>
+                </div>
             </div>
         </div>
     </div>

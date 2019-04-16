@@ -1,3 +1,52 @@
-<footer class="footer" role="contentinfo">
+{% import "data/homepage.twig" as homepage %}
 
+<footer class="footer" role="contentinfo">
+    <div class="footer__info">
+        <div class="container">
+            <div class="footer__list">
+                <div class="footer__item footer__item--info">
+                    <div class="footer__item-inner">
+                        <div class="footer__logo">
+                            {{ logo.logo() }}
+                        </div>
+                        <a class="footer__tel">{{ homepage.sections.contacts.tel }}</a>
+                        <a href="" class="footer__email">{{ homepage.sections.contacts.email }}</a>
+                        <div class="footer__address">{{ homepage.sections.contacts.address }}</div>
+                    </div>
+                </div>
+                <div class="footer__item footer__item--category">
+                    <ul class="footer__item-links">
+                        <li>
+                            <a href="" class="footer__item-link">Legal</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__item-link">Recruitment</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__item-link">Press</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__item-link">Our Restaurants</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item footer__item--newsletter">
+
+                </div>
+                <div class="footer__item footer__item--properties">
+                    <div>Our Properties</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer__additional-info">
+            <div class="footer__company">© BRASSERIE ZÉDEL</div>
+            <div class="footer__privacy">
+                <span class="footer__privacy-item">Cookies & Privacy</span>
+                <span class="footer__privacy-item">Terms & Conditions</span>
+            </div>
+            <address class="footer__developers">Website by <a class="footer__developers-link" href="">DiffusionDigital</a></address>
+        </div>
+    </div>
 </footer>

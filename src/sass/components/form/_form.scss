@@ -1,31 +1,12 @@
 .form {
-  font-size: 30px;
-
-  @include mq($exl) {
-    font-size:24px;
-  }
-
-  @include mq($xxxl) {
-    font-size: 20px;
-  }
-
-  @include mq($lg) {
-    font-size: 18px;
-  }
 
   &__input {
     display: block;
-    width: 100%;
-    border: 2px solid #fff;
+    border: none;
     background: none;
-    padding: 8px 10px;
-    margin-bottom: 15px;
+    border-bottom: 2px solid $secondary-color;
+    padding: 10px 13px;
     font-size: inherit;
-    transition: border-color 0.8s;
-
-    &:focus {
-      border: 2px solid $primary-color;
-    }
 
     &:last-child {
       margin-bottom: 0;
@@ -33,6 +14,7 @@
 
     &::placeholder {
       font-weight: 300;
+      font-size: 14px;
     }
 
     @include mq($lg) {
