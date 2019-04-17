@@ -31,10 +31,39 @@
                     </ul>
                 </div>
                 <div class="footer__item footer__item--newsletter">
-
+                    <div class="newsletter">
+                        <div class="newsletter__title italic">Signup for our newsletter</div>
+                        <label class="newsletter__label">
+                            <input class="newsletter__input form__input" placeholder="Enter address">
+                            <div class="newsletter__sign-up-icon">
+                                {% include "svg/_arrow-right.twig" %}
+                            </div>
+                        </label>
+                        <div class="newsletter__social">
+                            <a class="newsletter__social-link" href="">{% include "svg/_social-intagram.twig" %}</a>
+                            <a class="newsletter__social-link" href="">{% include "svg/_social-facebook.twig" %}</a>
+                            <a class="newsletter__social-link" href="">{% include "svg/_social-twitter.twig" %}</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="footer__item footer__item--properties">
-                    <div>Our Properties</div>
+                    <div class="soutine-properties">
+                        <div class="soutine-properties__title">Our Properties</div>
+                        <p class="soutine-properties__description">
+                            A collection of restaurants, cafés & brasseries from the restaurateurs Chris Corbin and Jeremy King.
+                            <a href="">View Portfolio</a>
+                        </p>
+                        <div class="soutine-properties__logo">
+                            {% include "svg/_properties.twig" %}
+                        </div>
+                        <div class="soutine-properties__pagination">
+                            <div class="soutine-properties__pagination-item"></div>
+                            <div class="soutine-properties__pagination-item"></div>
+                            <div class="soutine-properties__pagination-item"></div>
+                            <div class="soutine-properties__pagination-item"></div>
+                            <div class="soutine-properties__pagination-item"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
