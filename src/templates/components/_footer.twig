@@ -5,7 +5,7 @@
         <div class="container">
             <div class="footer__list">
                 <div class="footer__item footer__item--info">
-                    <div class="footer__item-inner">
+                    <div class="footer__contacts">
                         <div class="footer__logo">
                             {{ logo.logo() }}
                         </div>
@@ -33,12 +33,12 @@
                 <div class="footer__item footer__item--newsletter">
                     <div class="newsletter">
                         <div class="newsletter__title italic">Signup for our newsletter</div>
-                        <label class="newsletter__label">
+                        <form class="newsletter__form">
                             <input class="newsletter__input form__input" placeholder="Enter address">
-                            <div class="newsletter__sign-up-icon">
+                            <button class="newsletter__submit">
                                 {% include "svg/_arrow-right.twig" %}
-                            </div>
-                        </label>
+                            </button>
+                        </form>
                         <div class="newsletter__social">
                             <a class="newsletter__social-link" href="">{% include "svg/_social-intagram.twig" %}</a>
                             <a class="newsletter__social-link" href="">{% include "svg/_social-facebook.twig" %}</a>
@@ -54,10 +54,10 @@
                             <a href="">View Portfolio</a>
                         </p>
                         <div class="soutine-properties__logo">
-                            {% include "svg/_properties.twig" %}
+                            <img src="./img/zedel.png" alt="">
                         </div>
                         <div class="soutine-properties__pagination">
-                            <div class="soutine-properties__pagination-item"></div>
+                            <div class="soutine-properties__pagination-item soutine-properties__pagination-item--active"></div>
                             <div class="soutine-properties__pagination-item"></div>
                             <div class="soutine-properties__pagination-item"></div>
                             <div class="soutine-properties__pagination-item"></div>

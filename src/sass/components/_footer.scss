@@ -1,6 +1,6 @@
 .footer {
 
-    &__container{
+    &__container {
         max-width: 1600px;
         margin: 0 auto;
     }
@@ -54,6 +54,13 @@
 
     }
 
+    &__contacts {
+        font-size: 13px;
+        font-weight: 500;
+        max-width: 200px;
+        margin-right: auto;
+    }
+
     &__tel, &__email {
         display: block;
         margin: 15px 0;
@@ -63,12 +70,9 @@
         line-height: 1.4;
     }
 
-    &__item-links {
-    }
-
     &__item-link {
         display: block;
-        margin: 1em 0;
+        margin: 1.5em 0;
         font-size: 13px;
         letter-spacing: 0.055em;
         font-weight: 500;
@@ -111,84 +115,103 @@
 }
 
 .newsletter {
+    max-width: 240px;
+    width: 100%;
 
-  &__title {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    margin-bottom: 25px;
-  }
-
-  &__social {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-  }
-
-  &__label {
-    display: block;
-    position: relative;
-  }
-
-  &__sign-up-icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &__input {
-    font-size: 13px;
-    letter-spacing: 0.05em;
-    border-bottom-width: 1px;
-  }
-
-  &__social-link {
-    display: block;
-    margin: 0 14px;
-
-    svg {
-      fill: $secondary-color;
-      opacity: 0.4;
-      transition: opacity 0.4s;
-
-      &:hover {
-        opacity: 1;
-      }
+    &__title {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        margin-bottom: 25px;
     }
-  }
+
+    &__social {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__form {
+        position: relative;
+    }
+
+    &__submit {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    &__input {
+        font-size: 13px;
+        letter-spacing: 0.05em;
+        border-bottom-width: 1px;
+        width: 100%;
+        padding-right: 35px;
+    }
+
+    &__social-link {
+        display: block;
+        margin: 0 14px;
+
+        svg {
+            fill: $secondary-color;
+            opacity: 0.4;
+            transition: opacity 0.4s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
 }
 
 .soutine-properties {
-  &__title {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    margin-bottom: 15px;
-  }
+    max-width: 260px;
+    margin-left: auto;
 
-  &__description {
-    font-size: 12px;
-    letter-spacing: 0.03em;
-    line-height: 1.44;
-    font-weight: 400;
-
-    a {
-      font-weight: 600;
-      text-decoration: underline;
+    &__title {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        margin-bottom: 15px;
     }
-  }
 
-  &__pagination {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+    &__logo {
+        display: inline-block;
+        width: 75px;
+        margin-top: 20px;
+    }
 
-  &__pagination-item {
-    width: 6px;
-    height: 3px;
-    margin: 0 6px;
-    background: $primary-color;
-  }
+    &__description {
+        font-size: 12px;
+        letter-spacing: 0.03em;
+        font-weight: 400;
+        line-height: 1.8;
+
+        a {
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    &__pagination-item {
+        width: 6px;
+        height: 3px;
+        margin: 0 4px;
+        background: $secondary-color;
+        opacity: 0.4;
+
+        &--active {
+            opacity: 1;
+        }
+    }
 }

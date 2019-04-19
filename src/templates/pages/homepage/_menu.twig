@@ -1,6 +1,6 @@
 {% import "data/homepage.twig" as homepage %}
 
-<section class="homepage-menu">
+<section class="homepage-menu" id="menu">
     <div class="container container--bordered">
         <div class="homepage-menu__inner">
             <div class="homepage-menu__body">
@@ -18,28 +18,45 @@
                     <div class="border-decoration__elem border-decoration__elem--right"></div>
                 </div>
                 <div class="homepage-menu__text text-center">
-                    {% for item in homepage.sections.menu %}
-                        <div class="homepage-menu__item {% if loop.first %} homepage-menu__item--active {% endif %}">
-                            <div class="homepage-menu__info">{{ item.info }}</div>
-                            <h2 class="homepage-menu__title primary-title">{{ item.title }}</h2>
-                            <p class="homepage-intro__description body-2">{{ item.description }}</p>
-                            <div class="homepage-intro__spacer">
-                                {% include "svg/_spacer.twig" %}
-                            </div>
-                            <p class="homepage-intro__reservation primary-subtitle">{{ item.subtitle }}</p>
+                    <div class="homepage-menu__text-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            {% for item in homepage.sections.menu %}
+                                <div class="homepage-menu__item swiper-slide">
+                                    <div class="homepage-menu__info">{{ item.info }}</div>
+                                    <h2 class="homepage-menu__title primary-title">{{ item.title }}</h2>
+                                    <p class="homepage-intro__description body-2">{{ item.description }}</p>
+                                    <div class="homepage-intro__spacer">
+                                        {% include "svg/_spacer.twig" %}
+                                    </div>
+                                    <p class="homepage-intro__reservation primary-subtitle">{{ item.subtitle }}</p>
+                                </div>
+                            {% endfor %}
                         </div>
-                    {% endfor %}
+                    </div>
                 </div>
             </div>
             <div class="menu-slider">
-                <img class="menu-slider__img" src="./img/menu-slider-img.png" alt="">
-                <div class="menu-slider__pagination">
-                    <button class="menu-slider__dash menu-slider__dash--active"></button>
-                    <button class="menu-slider__dash"></button>
-                    <button class="menu-slider__dash"></button>
-                    <button class="menu-slider__dash"></button>
+                <div class="menu-slider__list swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="menu-slider__item swiper-slide">
+                            <img class="menu-slider__img" src="./img/menu-photo.jpg" alt="">
+                        </div>
+                        <div class="menu-slider__item swiper-slide">
+                            <img class="menu-slider__img" src="./img/menu-photo.jpg" alt="">
+                        </div>
+                        <div class="menu-slider__item swiper-slide">
+                            <img class="menu-slider__img" src="./img/menu-photo.jpg" alt="">
+                        </div>
+                        <div class="menu-slider__item swiper-slide">
+                            <img class="menu-slider__img" src="./img/menu-photo.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-slider__mask">
+                    {% include "svg/_menu-slider-mask.twig" %}
                 </div>
             </div>
+            <div class="menu-slider__pagination"></div>
         </div>
     </div>
 </section>

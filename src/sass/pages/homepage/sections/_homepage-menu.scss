@@ -27,6 +27,7 @@
     text-transform: uppercase;
     color: rgba($secondary-color, 0.4);
     border-right: 2px solid rgba($secondary-color,0.2);
+    transition: color 0.3s;
 
     &:last-child {
       border-right: none;
@@ -50,48 +51,68 @@
   }
 
   &__item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    z-index: 0;
-    pointer-events: none;
-    transition: opacity 0.4s;
-
-    &--active {
-      position: relative;
-      opacity: 1;
-      z-index: 1;
-    }
   }
 }
 
 .menu-slider {
+  position: relative;
   max-width: 890px;
   margin: 90px auto 0;
+
+  &__mask {
+    width: 100%;
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+
+    svg {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .swiper-wrapper {
+      height: 100%;
+    }
+  }
+
+  &__item {
+    height: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   &__pagination {
     display: flex;
     justify-content: center;
     margin-top: 35px;
-  }
 
-  &__dash {
-    height: 3px;
-    width: 19px;
-    margin: 0 10px;
-    background: $secondary-color;
-    display: block;
-    cursor: pointer;
-    opacity: 0.2;
-    transition: opacity 0.4s;
+    .swiper-pagination-bullet {
+      height: 3px;
+      width: 19px;
+      margin: 0 10px;
+      background: $secondary-color;
+      display: block;
+      cursor: pointer;
+      opacity: 0.2;
+      transition: opacity 0.4s;
+      border-radius: 0;
 
-    &:hover {
-      opacity: 0.8;
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
-    &--active {
+    .swiper-pagination-bullet-active {
       opacity: 1 !important;
     }
   }
