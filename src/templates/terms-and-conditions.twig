@@ -1,0 +1,16 @@
+{% import "data/terms-conditions.twig" as termsConditions %}
+
+
+{% extends 'layouts/_layuot.twig' %}
+
+{% block content %}
+    {% include "components/_header.twig" %}
+
+    <main class="terms-conditions">
+        <h1 class="terms-conditions__title">{{ termsConditions.termsConditions.title }}</h1>
+        <div class="terms-conditions__text">
+
+        </div>
+        {% include "components/_footer.twig" %}
+    </main>
+{% endblock %}
