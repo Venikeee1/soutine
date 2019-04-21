@@ -3,7 +3,7 @@ import WindowStore from "../store/windowStore";
 
 export default class {
     constructor() {
-        this.navContainer = document.querySelector('.header__nav-wrapper');
+        this.navContainer = document.querySelector('.header__nav--sticky');
         this.navItemBtns = document.querySelectorAll('.header__link');
         this.navItems = document.querySelectorAll('.header__item');
         this.navItemActive = document.querySelector('.header__item--active');
@@ -14,9 +14,13 @@ export default class {
 
     addSmoothScrollToElement() {
         Array.from(this.navItemBtns).forEach( (elem, i) => {
+            const anchor = elem.getAttribute('href');
+            const navId = anchor.replace('#', '');
+            this.navItems[i].setAttribute('data-nav', navId);
+
             elem.addEventListener('click', (e) => {
                 e.preventDefault();
-                const anchor = elem.getAttribute('href');
+
                 const container = document.querySelector(anchor);
                 this.navItemActive.classList.remove('header__item--active');
                 this.navItemActive = this.navItems[i];
@@ -25,6 +29,26 @@ export default class {
 
                 WindowStore.isBurgerShown() && this.closeMenu();
             })
+        })
+    }
+
+    scrollSpy() {
+        const sections = Array.from(document.querySelectorAll('[data-section]')).reverse();
+
+        window.addEventListener('scroll', () => {
+            for ( let i = 0; i < sections.length; i++) {
+                const windowSrollTop = window.pageYOffset || window.scrollY;
+                const top = sections[i].offsetTop;
+
+                if( windowSrollTop >= top - 200 ) {
+                    this.navItemActive.classList.remove('header__item--active');
+                    const activeSectionName = sections[i].getAttribute('data-section');
+                    this.navItemActive = document.querySelector(`[data-nav=${activeSectionName}]`);
+                    this.navItemActive.classList.add('header__item--active');
+
+                    break;
+                }
+            }
         })
     }
 
@@ -47,7 +71,8 @@ export default class {
     }
 
     fixHeaderOnScroll() {
-        const headerTop = this.navContainer.offsetTop;
+        const headerTop = document.querySelector('.header__nav-wrapper').offsetTop;
+
         window.addEventListener('scroll', () => {
 
             const windowSrollTop = window.pageYOffset || window.scrollY;
@@ -64,6 +89,7 @@ export default class {
         this.addSmoothScrollToElement();
         this.fixHeaderOnScroll();
         this.addBurgerListener();
+        this.scrollSpy();
     }
 
 }

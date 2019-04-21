@@ -181,6 +181,10 @@
         display: inline-block;
         margin: 0 20px;
         white-space: nowrap;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     &__developers {
@@ -273,7 +277,7 @@
         margin-bottom: 15px;
     }
 
-    &__logo {
+    &__logos {
         display: inline-block;
         width: 75px;
         margin-top: 20px;
@@ -282,7 +286,6 @@
     &__description {
         font-size: 12px;
         letter-spacing: 0.03em;
-        font-weight: 400;
         line-height: 1.8;
 
         a {
@@ -296,16 +299,17 @@
         justify-content: center;
         flex-wrap: wrap;
         margin-top: 20px;
-    }
 
-    &__pagination-item {
-        width: 6px;
-        height: 3px;
-        margin: 0 4px;
-        background: $secondary-color;
-        opacity: 0.4;
+        .swiper-pagination-bullet {
+            width: 6px;
+            height: 3px;
+            margin: 0 4px;
+            background: $secondary-color;
+            opacity: 0.4;
+            border-radius: 0;
+        }
 
-        &--active {
+        .swiper-pagination-bullet-active {
             opacity: 1;
         }
     }

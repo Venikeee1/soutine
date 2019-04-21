@@ -1,11 +1,11 @@
 {% import "data/homepage.twig" as homepage %}
 
-<article class="homepage-time" id="contacts">
+<article class="homepage-time" id="contacts" data-section="contacts">
     <div class="container container--bordered">
         <div class="homepage-time__inner">
             <section class="homepage-time__description">
                 <h2 class="primary-title">{{ homepage.sections.workingHours.title }}</h2>
-                <div class="italic">
+                <div class="homepage-time__block">
                     <div class="homepage-time__schedule">
                         <div class="homepage-time__item">{{ homepage.sections.workingHours.days }}</div>
                         <div class="homepage-time__item text-uppercase">{{ homepage.sections.workingHours.hours }}</div>
@@ -33,7 +33,7 @@
             </section>
             <section class="homepage-time__description">
                 <h2 class="primary-title">{{ homepage.sections.contacts.title }}</h2>
-                <div class="italic">
+                <div class="homepage-time__block">
                     <div class="homepage-time__schedule">
                         <div class="homepage-time__item">{{ homepage.sections.contacts.tel }}</div>
                         <div class="homepage-time__item">{{ homepage.sections.contacts.email }}</div>

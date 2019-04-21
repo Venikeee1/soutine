@@ -4,6 +4,7 @@
     letter-spacing: 0.03em;
     line-height: 1.3;
     margin: 0.5em 0;
+    font-family: $brand-font-2;
 
     @include mq($md) {
         font-size: 26px;
@@ -14,6 +15,8 @@
     font-size: 22px;
     line-height: 1.2;
     text-transform: uppercase;
+    font-family: $brand-font-2;
+    letter-spacing: 0.03em;
 }
 
 .subtitle {

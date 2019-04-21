@@ -1,0 +1,38 @@
+<section class="menu-popup">
+    <div class="menu-popup__header">
+        <div class="menu-popup__container container">
+            <button class="menu-popup__icon menu-popup__close">
+                {% include "svg/_x.twig" %}
+            </button>
+            <ul class="menu-popup__list">
+                <li class="menu-popup__item menu-popup__item--active">
+                    <button class="menu-popup__btn">All day menu</button>
+                </li>
+                <li class="menu-popup__item">
+                    <button class="menu-popup__btn">Breakfast menu</button>
+                </li>
+                <li class="menu-popup__item">
+                    <button class="menu-popup__btn">Wine list</button>
+                </li>
+            </ul>
+            <button class="menu-popup__icon menu-popup__download">
+                {% include "svg/_download.twig" %}
+            </button>
+        </div>
+    </div>
+    <div class="menu-popup__container container">
+        <section class=" menu-popup__gallery swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/menu/menu.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/menu/menu.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/menu/menu.jpg" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+</section>

@@ -1,6 +1,6 @@
 {% import "data/homepage.twig" as homepage %}
 
-<section class="homepage-reservation" id="reservation">
+<section class="homepage-reservation" id="reservation" data-section="reservation">
     <div class="container container--bordered">
         <div class="homepage-reservation__inner">
             <div class=" card card--default">
@@ -11,7 +11,7 @@
                         <div class="homepage-reservation__more">
                             <button class="homepage-reservation__more-btn subtitle">
                                 {{ homepage.sections.reservation.viewMore }}
-                                <span class="homepage-reservation__icon icon">+</span>
+                                <span class="homepage-reservation__icon icon"></span>
                             </button>
                             <div class="homepage-reservation__details primary-border">
                                 <p class="body-1">{{ homepage.sections.reservation.details }}</p>

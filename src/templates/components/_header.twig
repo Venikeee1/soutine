@@ -6,7 +6,27 @@
         {{ logo.logo() }}
     </div>
     <div class="header__nav-wrapper">
-        <nav class="header__nav">
+        <nav class="header__nav header__nav--sticky">
+            <div class="container">
+                <div class="header__burger">
+                    <button class="header__burger-btn">
+                        {% include "svg/_burger.twig" %}
+                    </button>
+                </div>
+            </div>
+            <div class="header__list-container container">
+                <ul class="header__list">
+                    {% for item in navigation.navigation %}
+                        <li class="header__item {% if loop.first %} header__item--active {% endif %}">
+                            <a class="header__link" href="{{ item.link }}">
+                                {{ item.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+        <nav class="header__nav header__nav--hidden">
             <div class="container">
                 <div class="header__burger">
                     <button class="header__burger-btn">

@@ -1,0 +1,85 @@
+.menu-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $bg-color;
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 60px;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    &__header {
+        padding: 20px 0;
+        border-bottom: 2px solid $border-color;
+    }
+
+    &__container {
+        position: relative;
+        max-width: 860px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        font-family: $brand-font-2;
+        padding: 0 40px;
+    }
+
+    &__item {
+        border-right: 2px solid $border-color;
+
+        &:last-child {
+            border-right: none;
+        }
+
+        &--active {
+            .menu-popup__btn {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__btn {
+        display: block;
+        padding: 0.4em 50px 0;
+        font-size: 18px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        opacity: 0.4;
+        transition: opacity 0.4s;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &__gallery {
+        margin: 40px auto 0;
+    }
+
+    &__close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    &__download {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+}

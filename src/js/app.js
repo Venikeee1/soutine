@@ -21,14 +21,15 @@ window.addEventListener('load', () => {
     Footer.init();
     Preloader.init();
 
-    if (document.querySelector('[data-page]').getAttribute('data-page') === 'homepage') {
+    const pageType = document.querySelector('[data-page]').getAttribute('data-page')
+
+    if (pageType === 'homepage') {
         Header.init();
         Homepage.init();
         CustomClock.init();
     }
 
-    if (document.querySelector('[data-page]').getAttribute('data-page') === 'terms-conditions') {
+    if (pageType === 'terms-conditions') {
         TermsConditions.init();
     }
-
 });

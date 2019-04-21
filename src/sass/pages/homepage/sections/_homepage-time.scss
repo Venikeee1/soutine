@@ -15,6 +15,7 @@
     &__description {
         width: 30%;
         text-align: center;
+        font-family: $brand-font-3;
 
         @include mq($lg) {
             width: 100%;
@@ -36,7 +37,7 @@
 
     &__item {
         font-size: 20px;
-        letter-spacing: 0.02em;
+        letter-spacing: 0;
         line-height: 1.7;
     }
 
@@ -49,6 +50,7 @@
         font-size: 22px;
         letter-spacing: 0.02em;
         line-height: 1.3;
+        font-family: $brand-font-2;
     }
 
     &__watch-map {
@@ -58,7 +60,7 @@
         font-size: 14px;
         line-height: 1.6;
         letter-spacing: 0.03em;
-        font-style: normal;
+        font-family: $brand-font-1;
 
         &::after {
             content: '';

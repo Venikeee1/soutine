@@ -51,6 +51,7 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        font-family: $brand-font-2;
 
         &:hover {
             &::after {

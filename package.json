@@ -45,5 +45,8 @@
     "swiper": "^4.4.1",
     "webpack": "^4.6.0",
     "webpack-bundle-analyzer": "^2.11.1"
+  },
+  "dependencies": {
+    "custom-select": "^1.1.15"
   }
 }

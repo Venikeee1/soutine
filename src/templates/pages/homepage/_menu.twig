@@ -1,15 +1,26 @@
 {% import "data/homepage.twig" as homepage %}
 
-<section class="homepage-menu" id="menu">
+<section class="homepage-menu" id="menu" data-section="menu">
     <div class="container container--bordered">
         <div class="homepage-menu__inner">
             <div class="homepage-menu__body">
+                <div class="mobile-select">
+                    <button class="mobile-select__current-val">
+                        {{  homepage.sections.menu[0].tab }}
+                        <span class="mobile-select__icon arrow-icon">{% include "svg/_tab-arrow-down.twig" %}</span>
+                    </button>
+                    <ul class="mobile-select__list">
+                        {% for item in homepage.sections.menu %}
+                            <li class="mobile-select__item">{{ item.tab }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
                 <div class="border-decoration homepage-menu__tabs-wrapper">
                     <div class="border-decoration__elem border-decoration__elem--left"></div>
                     <div class="homepage-menu__tabs">
                         {% for item in homepage.sections.menu %}
                             <button
-                                    class="homepage-menu__tab text-center {% if loop.first %} homepage-menu__tab--active {% endif %}"
+                                    class="homepage-menu__tab text-center line-height-fix {% if loop.first %} homepage-menu__tab--active {% endif %}"
                             >
                                 {{ item.tab }}
                             </button>
@@ -28,7 +39,7 @@
                                     <div class="homepage-intro__spacer">
                                         {% include "svg/_spacer.twig" %}
                                     </div>
-                                    <p class="homepage-intro__reservation primary-subtitle">{{ item.subtitle }}</p>
+                                    <a href="" class="homepage-menu__show-menu primary-subtitle">{{ item.subtitle }}</a>
                                 </div>
                             {% endfor %}
                         </div>

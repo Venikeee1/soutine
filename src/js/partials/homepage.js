@@ -1,4 +1,5 @@
 import Swiper from "swiper";
+import MenuPopupInstance from './menu-popup';
 
 export default class {
     constructor() {
@@ -7,6 +8,15 @@ export default class {
         this.textSlider = null;
         this.showMoreBtn = document.querySelector('.homepage-reservation__more-btn');
         this.showMoreText  = document.querySelector('.homepage-reservation__details');
+        this.menuPopup = new MenuPopupInstance();
+    }
+
+    goToReservation() {
+        const reservationSection = document.querySelector('#reservation');
+        const btn = document.querySelector('.homepage-intro__reservation')
+        btn.addEventListener('click', () => {
+            TweenMax.to(window, 0.4, {scrollTo: reservationSection.offsetTop});
+        })
     }
 
     addMenuTabs() {
@@ -76,10 +86,25 @@ export default class {
             : this.openShowMore()
     }
 
+    setMenuButtonsListener() {
+        const menuBtns = document.querySelectorAll('.homepage-menu__show-menu');
+
+        Array.from(menuBtns).forEach( (elem, index) => {
+            elem.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.menuPopup.setActiveTab(index);
+                this.menuPopup.open();
+            })
+        })
+    }
+
     init() {
+        this.menuPopup.init();
         this.addMenuSlider();
         this.addMenuTabs();
         this.showMoreInfoForReservationOnClick();
+        this.goToReservation();
+        this.setMenuButtonsListener();
     }
 
 }

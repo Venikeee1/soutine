@@ -1,5 +1,4 @@
 .homepage-intro {
-  padding-top: 268px;
 
   &__img {
     margin: 0 auto;
@@ -33,6 +32,11 @@
   &__reservation {
     margin: 0 auto;
     max-width: 170px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
 }

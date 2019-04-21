@@ -1,101 +1,127 @@
 .homepage-reservation {
-  background: url(../img/patern.png) 50% 50%;
-  background-size: cover;
+    background: url(../img/patern.png) 50% 50%;
+    background-size: cover;
 
-  &__inner {
-    min-height: 600px;
-    padding: 130px 0;
-  }
-
-  &__card {
-    padding: 65px 10% 70px;
-
-    @include mq($xxl) {
-      padding: 65px 7% 70px;
-    }
-  }
-
-  &__more {
-    margin-top: 20px;
-    position: relative;
-  }
-
-  &__details {
-    position: absolute;
-    left: 40%;
-    top: calc(100% + 20px);
-    padding: 50px 40px;
-    max-width: 400px;
-    width: 100%;
-    background: $bg-color;
-    z-index: 1;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s;
-
-    &--active {
-      opacity: 1;
-      pointer-events: auto;
+    &__inner {
+        min-height: 600px;
+        padding: 130px 0;
     }
 
-    @include mq($lg) {
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-    }
-  }
+    &__card {
+        padding: 65px 10% 70px;
 
-  &__icon {
-    width: 24px;
-    height: 24px;
-    border: 1px solid $secondary-color;
-    border-radius: 50%;
-    text-align: center;
-    vertical-align: middle;
-    margin-top: -3px;
-    margin-left: 5px;
-    font-weight: 200;
-    transition: color 0.4s, background-color 0.4s, transform 0.4s;
-  }
-
-  &__more-btn {
-    cursor: pointer;
-
-    &--active {
-      .homepage-reservation__icon {
-        transform: rotate(45deg);
-        background: $secondary-color;
-        color: #fff;
-      }
+        @include mq($xxl) {
+            padding: 65px 7% 70px;
+        }
     }
 
-    &:hover {
-      text-decoration: underline;
+    &__more {
+        margin-top: 20px;
+        position: relative;
     }
-  }
+
+    &__details {
+        position: absolute;
+        left: 40%;
+        top: calc(100% + 20px);
+        padding: 50px 40px;
+        max-width: 400px;
+        width: 100%;
+        background: $bg-color;
+        z-index: 1;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s;
+
+        &--active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        @include mq($lg) {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        border: 1px solid $secondary-color;
+        border-radius: 50%;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: -3px;
+        margin-left: 5px;
+        transition: color 0.4s, background-color 0.4s, transform 0.4s;
+
+        &::after, &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background: $secondary-color;
+        }
+
+        &::before {
+            height: 12px;
+            width: 2px;
+        }
+
+        &::after {
+            height: 2px;
+            width: 12px;
+        }
+    }
+
+    &__more-btn {
+        cursor: pointer;
+        font-family: $brand-font-2;
+
+        &--active {
+            .homepage-reservation__icon {
+                transform: rotate(45deg);
+                background: $secondary-color;
+                color: #fff;
+
+                &::before, &::after {
+                    background: #fff;
+                }
+            }
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .reservation-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-top: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 45px;
 
-  &__item {
-    width: 48%;
-    margin-bottom: 50px;
+    &__item {
+        width: 48%;
+        margin-bottom: 50px;
 
-    @include mq($xl) {
-      width: 100%;
+        @include mq($xl) {
+            width: 100%;
+        }
+
+        @include mq($md) {
+            margin-bottom: 25px;
+        }
     }
 
-    @include mq($md) {
-      margin-bottom: 25px;
+    &__btn {
+        margin-top: 30px;
     }
-  }
-
-  &__btn {
-    margin-top: 30px;
-  }
 }

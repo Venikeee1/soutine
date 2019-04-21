@@ -1,0 +1,40 @@
+{% import "data/properties.twig" as properties %}
+
+---
+title: Properties
+---
+
+{% extends 'layouts/_layuot.twig' %}
+
+{% block content %}
+
+    <div class="wrapper  main-theme">
+        {% include "components/_header-return.twig" %}
+        <main class="properties-page" data-page="properties">
+            <div class="properties-page__container bordered-container">
+                <div class="properties-page__bg">
+                    <img src="./img/properties-img.jpg" alt="">
+                </div>
+                <div class="container">
+                    <div class="properties-page__body">
+                        <h1 class="primary-title text-center">{{ properties.prop.title }}</h1>
+                        <p class="body-1 text-center">{{ properties.prop.description }}</p>
+                        <div class="properties-page__list">
+                            {% for item in properties.prop.list %}
+                                <div class="property">
+                                    <figure class="property__logo">
+                                        <img src="{{ item.img_url }}" alt="">
+                                    </figure>
+                                    <h2 class="property__title">{{ item.title }}</h2>
+                                    <p class="property__description">{{ item.description }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% include "components/_footer.twig" %}
+    </div>
+
+{% endblock %}
