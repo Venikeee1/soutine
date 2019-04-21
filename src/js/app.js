@@ -2,6 +2,7 @@
 import {TweenMax} from 'gsap/TweenMax';
 import HeaderInstance from './partials/header';
 import FooterInstance from './partials/footer';
+import TermsConditionsInstance from './partials/terms-conditions';
 import PreloaderInstance from './partials/preloader';
 import Clock from './partials/clock';
 import HomepageInstance from './partials/homepage';
@@ -15,11 +16,19 @@ window.addEventListener('load', () => {
     const Preloader = new PreloaderInstance();
     const CustomClock = new Clock();
     const Homepage = new HomepageInstance();
+    const TermsConditions = new TermsConditionsInstance();
 
-    Header.init();
     Footer.init();
     Preloader.init();
-    CustomClock.init();
-    Homepage.init();
+
+    if (document.querySelector('[data-page]').getAttribute('data-page') === 'homepage') {
+        Header.init();
+        Homepage.init();
+        CustomClock.init();
+    }
+
+    if (document.querySelector('[data-page]').getAttribute('data-page') === 'terms-conditions') {
+        TermsConditions.init();
+    }
 
 });

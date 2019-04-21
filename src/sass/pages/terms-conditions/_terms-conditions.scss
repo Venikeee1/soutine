@@ -1,0 +1,105 @@
+.terms-conditions {
+    padding: 115px 0 120px;
+
+    @include mq($md) {
+        padding-top: 70px;
+    }
+
+    &__body {
+        max-width: 850px;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0 30px;
+
+        @include mq($md) {
+            width: 100%;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.72;
+            letter-spacing: 0.03em;
+            margin-bottom: 2em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        h2 {
+            margin: 0.5em 0;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.03em;
+        }
+    }
+
+    &__list {
+        margin-top: 20px;
+    }
+
+    &__btn {
+        display: block;
+        position: relative;
+        width: 100%;
+        text-align: left;
+        padding: 25px 30px 15px 0;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+        cursor: pointer;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        &:hover {
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+
+        &--active {
+            .terms-conditions__arrow-down {
+                transform: rotate(180deg);
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background: rgba($secondary-color,0.2);
+            margin: 0 auto;
+            transform: scaleX(0.75);
+            transition: transform 0.4s;
+
+            @include mq($lg) {
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    &__arrow-down {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        transition: transform 0.4s;
+    }
+    &__item {}
+
+    &__item-text {
+        overflow: hidden;
+        height: 0;
+    }
+
+    &__item-inner {
+        padding: 40px 0 20px;
+    }
+}

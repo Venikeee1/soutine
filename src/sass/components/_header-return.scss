@@ -1,0 +1,39 @@
+.header-return {
+    width: 100%;
+    border-bottom: 2px solid $border-color;
+
+    &__container {
+        position: relative;
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: 25px 30px;
+        width: 100%;
+        transition: opacity 0.4s;
+
+        &:hover {
+            opacity: 0.4;
+
+            .header-return__arrow-left {
+                transform: translateX(-10px);
+            }
+        }
+    }
+
+    &__arrow-left {
+        display: inline-block;
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        transition: transform 0.4s;
+    }
+}

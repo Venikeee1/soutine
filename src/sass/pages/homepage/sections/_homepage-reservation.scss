@@ -9,17 +9,15 @@
 
   &__card {
     padding: 65px 10% 70px;
+
+    @include mq($xxl) {
+      padding: 65px 7% 70px;
+    }
   }
 
   &__more {
     margin-top: 20px;
     position: relative;
-
-    &:hover {
-      .homepage-reservation__details {
-        opacity: 1;
-      }
-    }
   }
 
   &__details {
@@ -34,10 +32,42 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s;
+
+    &--active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @include mq($lg) {
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    border: 1px solid $secondary-color;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-left: 5px;
+    font-weight: 200;
+    transition: color 0.4s, background-color 0.4s, transform 0.4s;
   }
 
   &__more-btn {
     cursor: pointer;
+
+    &--active {
+      .homepage-reservation__icon {
+        transform: rotate(45deg);
+        background: $secondary-color;
+        color: #fff;
+      }
+    }
 
     &:hover {
       text-decoration: underline;
@@ -55,5 +85,17 @@
   &__item {
     width: 48%;
     margin-bottom: 50px;
+
+    @include mq($xl) {
+      width: 100%;
+    }
+
+    @include mq($md) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__btn {
+    margin-top: 30px;
   }
 }

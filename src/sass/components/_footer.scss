@@ -21,6 +21,14 @@
 
     &__list {
         display: flex;
+
+        @include mq($xl) {
+            flex-wrap: wrap;
+        }
+
+        @include mq($md) {
+            padding: 20px 0;
+        }
     }
 
     &__item {
@@ -30,26 +38,77 @@
         width: 26.66666%;
         padding: 50px 0 60px;
         text-align: center;
-        border-right: 2px solid rgba($secondary-color, 0.2);
+        border-right: 2px solid $border-color;
+
+        @include mq($xl) {
+            padding: 40px 0 30px;
+        }
+
+        @include mq($xl) {
+            width: 50%;
+        }
+
+        @include mq($md) {
+            width: 100%;
+        }
 
         &:last-child {
             border-right: none;
         }
 
+        &:nth-child(n) {
+
+            @include mq($md) {
+                border-right: none;
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+
+        @include mq($lg) {
+            padding: 40px 0;
+        }
+
         &--info {
             width: 22%;
+
+            @include mq($xl) {
+                padding-right: 30px;
+            }
         }
 
         &--category {
             width: 23%;
+
+            @include mq($xl) {
+                order: 2;
+                padding-right: 30px;
+            }
         }
 
         &--newsletter {
             width: 28%;
+
+            @include mq($xl) {
+                order: 1;
+                padding-left: 30px;
+                border-right: none;
+            }
+
+            @include mq($md) {
+                margin-top: 20px;
+            }
+
         }
 
         &--properties {
             width: 27%;
+
+            @include mq($xl) {
+                order: 3;
+                padding-left: 30px;
+                border-right: none;
+            }
         }
 
     }
@@ -59,6 +118,10 @@
         font-weight: 500;
         max-width: 200px;
         margin-right: auto;
+
+        @include mq($xl) {
+            margin: 0 auto;
+        }
     }
 
     &__tel, &__email {
@@ -85,6 +148,18 @@
         font-weight: 600;
         font-size: 12px;
         letter-spacing: 0.03em;
+
+        @include mq($md) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__company {
+        @include mq($md) {
+            order: 1;
+            margin: 20px 20px 0;
+        }
     }
 
     &__privacy {
@@ -94,15 +169,27 @@
         width: 100%;
         font-weight: 500;
         letter-spacing: 0.06em;
+
+        @include mq($md) {
+            width: 100%;
+            max-width: none;
+            justify-content: center;
+        }
     }
 
     &__privacy-item {
         display: inline-block;
-        margin: 0 10px;
+        margin: 0 20px;
+        white-space: nowrap;
     }
 
     &__developers {
         font-weight: 500;
+
+        @include mq($md) {
+            order: 2;
+            margin: 20px 20px 0;
+        }
     }
 
     &__developers-link {
@@ -149,6 +236,10 @@
         border-bottom-width: 1px;
         width: 100%;
         padding-right: 35px;
+
+        @include mq($md) {
+            margin-bottom: 8px;
+        }
     }
 
     &__social-link {
@@ -170,6 +261,10 @@
 .soutine-properties {
     max-width: 260px;
     margin-left: auto;
+
+    @include mq($xl) {
+        margin: 0 auto;
+    }
 
     &__title {
         font-size: 12px;

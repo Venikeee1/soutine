@@ -1,16 +1,55 @@
 .container {
-  max-width: 1260px;
-  margin: 0 auto;
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 30px;
 
-  &--bordered {
-    padding: 0;
+    &--bordered {
+        border-right: 3px solid $secondary-color;
+        border-left: 3px solid $secondary-color;
+        width: 90%;
+
+        @include mq($lg) {
+            border: none;
+            width: 100%;
+        }
+    }
+}
+
+.bordered-container {
+    max-width: 1340px;
+    margin: 0 auto;
     border-right: 3px solid $secondary-color;
     border-left: 3px solid $secondary-color;
-  }
+    width: 90%;
+
+    @include mq($lg) {
+        border: none;
+        width: 100%;
+    }
 }
 
 .primary-border {
-  border: 3px solid $secondary-color;
+    border: 3px solid $secondary-color;
+}
+
+.main-theme {
+    background: $primary-color;
+}
+
+.arrow-icon {
+    width: 18px;
+    height: 17px;
+    fill: $secondary-color;
+    pointer-events: none;
+
+    svg {
+        width: 18px;
+        height: 17px;
+    }
+}
+
+.icon {
+    display: inline-block;
 }
 
 

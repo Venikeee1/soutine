@@ -9,7 +9,10 @@
                         <h2 class="primary-title">{{ homepage.sections.reservation.title }}</h2>
                         <p class="homepage-reservation__description body-1">{{ homepage.sections.reservation.description }}</p>
                         <div class="homepage-reservation__more">
-                            <button class="homepage-reservation__more-btn subtitle">{{ homepage.sections.reservation.viewMore }}</button>
+                            <button class="homepage-reservation__more-btn subtitle">
+                                {{ homepage.sections.reservation.viewMore }}
+                                <span class="homepage-reservation__icon icon">+</span>
+                            </button>
                             <div class="homepage-reservation__details primary-border">
                                 <p class="body-1">{{ homepage.sections.reservation.details }}</p>
                             </div>
@@ -18,7 +21,7 @@
                             <input type="text" class="reservation-form__item form__input" placeholder="Select a date*">
                             <input type="text" class="reservation-form__item form__input" placeholder="Time*">
                             <input type="text" class="reservation-form__item form__input" placeholder="N of people*">
-                            <div class="reservation-form__item border-decoration">
+                            <div class="reservation-form__item reservation-form__btn border-decoration">
                                 <div class="border-decoration__elem border-decoration__elem--left"></div>
                                     <button class="btn" type="submit">{{ homepage.sections.reservation.button }}</button>
                                 <div class="border-decoration__elem border-decoration__elem--right"></div>

@@ -4,13 +4,37 @@
 {% extends 'layouts/_layuot.twig' %}
 
 {% block content %}
-    {% include "components/_header.twig" %}
 
-    <main class="terms-conditions">
-        <h1 class="terms-conditions__title">{{ termsConditions.termsConditions.title }}</h1>
-        <div class="terms-conditions__text">
-
-        </div>
+    <div class="wrapper  main-theme">
+        {% include "components/_header-return.twig" %}
+        <main class="terms-conditions" data-page="terms-conditions">
+            <div class="terms-conditions__body">
+                <h1 class="terms-conditions__title primary-title text-center">
+                    {{ termsConditions.termsConditions.title }}
+                </h1>
+                <div class="terms-conditions__description">
+                    {{ termsConditions.termsConditions.description | safe }}
+                </div>
+                <div class="terms-conditions__list">
+                    {% for item in termsConditions.termsConditions.itemList %}
+                        <div class="terms-conditions__item">
+                            <button class="terms-conditions__btn">
+                                {{ item.title }}
+                                <span class="terms-conditions__arrow-down arrow-icon">
+                                    {% include "svg/_tab-arrow-down.twig" %}
+                                </span>
+                            </button>
+                            <div class="terms-conditions__item-text">
+                                <div class="terms-conditions__item-inner">
+                                    {{ item.body | safe }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </main>
         {% include "components/_footer.twig" %}
-    </main>
+    </div>
+
 {% endblock %}

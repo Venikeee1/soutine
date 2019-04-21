@@ -21,9 +21,6 @@
       padding: 5px 8px;
     }
 
-    @include mq($md) {
-      margin-bottom: 8px;
-    }
   }
 
   &__textarea {

@@ -1,10 +1,12 @@
+$burger-breakpoint: 1280px;
+
 .header {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     padding-top: 30px;
-    z-index: 100;git
+    z-index: 100;
 
     &__logo {
         display: flex;
@@ -13,8 +15,10 @@
     }
 
     &__nav {
+        position: relative;
         padding: 18px 0;
-        border: 2px solid rgba(#5f4638, 0.1);
+        border-top: 2px solid $border-color;
+        border-bottom: 2px solid $border-color;
 
         &--fixed {
             position: fixed;
@@ -25,11 +29,40 @@
         }
     }
 
+    &__list-container {
+        transition: opacity 0.4s;
+
+        @include mq($burger-breakpoint) {
+            position: absolute;
+            width: 100%;
+            top: calc(100% + 2px);
+            left: 0;
+            padding-right: 0;
+            padding-left: 0;
+            background: $bg-color;
+            border-bottom: 2px solid $border-color;
+            opacity: 0;
+            pointer-events: none;
+
+            &--active {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+    }
+
     &__list {
         max-width: 1100px;
         margin: 0 auto;
         display: flex;
         justify-content: center;
+
+        @include mq($burger-breakpoint) {
+            flex-direction: column;
+            max-width: none;
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
     }
 
     &__item {
@@ -70,6 +103,28 @@
             &::before, &::after {
                 opacity: 1;
             }
+        }
+
+        @include mq($burger-breakpoint) {
+            border-right: none;
+            text-align: center;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+
+        @include mq($burger-breakpoint) {
+            padding: 10px 0;
+        }
+    }
+
+    &__burger {
+        display: none;
+
+        @include mq($burger-breakpoint) {
+            display: flex;
+            justify-content: center;
         }
     }
 }

@@ -7,4 +7,8 @@
   cursor: pointer;
   border: 2px solid transparent;
   padding: 8px 15px;
+
+  @include mq($md) {
+    font-size: 18px;
+  }
 }
