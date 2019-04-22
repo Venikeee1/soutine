@@ -35,8 +35,8 @@
                 <h2 class="primary-title">{{ homepage.sections.contacts.title }}</h2>
                 <div class="homepage-time__block">
                     <div class="homepage-time__schedule">
-                        <div class="homepage-time__item">{{ homepage.sections.contacts.tel }}</div>
-                        <div class="homepage-time__item">{{ homepage.sections.contacts.email }}</div>
+                        <a href="tel:{{ homepage.sections.contacts.tel }}" class="homepage-time__item homepage-time__item-link">{{ homepage.sections.contacts.tel }}</a>
+                        <a href="mailto:{{ homepage.sections.contacts.email }}" class="homepage-time__item homepage-time__item-link">{{ homepage.sections.contacts.email }}</a>
                     </div>
                     <div class="homepage-time__schedule">
                         <div class="homepage-time__item">{{ homepage.sections.contacts.address }}</div>

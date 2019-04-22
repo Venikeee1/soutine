@@ -1,4 +1,5 @@
 import Swiper from "swiper";
+import Dropdown from './customDropdown';
 
 export default class {
     constructor() {
@@ -10,24 +11,25 @@ export default class {
         this.slider = null;
         this.timeline = new TimelineMax();
         this.closeBtn = document.querySelector('.menu-popup__close');
-    }
-
-    addMenuSlider() {
-        this.slider = new Swiper(this.menuListContainer, {
+        this.sliderSettings = {
             speed: 800,
             allowTouchMove: false,
             //effect: 'fade'
-        });
+        }
     }
 
-    setActiveTab(index = 0) {
+    addMenuSlider() {
+        this.slider = new Swiper(this.menuListContainer, this.sliderSettings);
+    }
+
+    setActiveTab(index = 0, speed = this.sliderSettings.speed) {
         if(this.activeTab) {
             this.activeTab.classList.remove('menu-popup__item--active');
         }
 
         this.activeTab = this.menuItems[index];
         this.activeTab.classList.add('menu-popup__item--active');
-        this.slider.slideTo(index)
+        this.slider.slideTo(index, speed)
     }
 
     addTabsListeners() {
@@ -65,5 +67,9 @@ export default class {
         this.setActiveTab();
         this.addTabsListeners();
         this.addCloseButtonListener();
+
+        new Dropdown('.menu-popup__mobile-dropdown', (i) => {
+            this.slider.slideTo(i);
+        });
     }
 }

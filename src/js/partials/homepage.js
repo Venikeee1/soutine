@@ -1,5 +1,9 @@
 import Swiper from "swiper";
 import MenuPopupInstance from './menu-popup';
+import Dropdown from './customDropdown';
+import datepicker from 'js-datepicker';
+import SlimSelect from 'slim-select'
+import {TweenLite} from "gsap/TweenLite";
 
 export default class {
     constructor() {
@@ -57,6 +61,10 @@ export default class {
         });
     }
 
+    createMobileDropDown() {
+        new Dropdown('.mobile-select');
+    }
+
     showMoreInfoForReservationOnClick() {
 
         this.showMoreBtn.addEventListener('click', (e) => {
@@ -92,10 +100,21 @@ export default class {
         Array.from(menuBtns).forEach( (elem, index) => {
             elem.addEventListener('click', (e) => {
                 e.preventDefault();
-                this.menuPopup.setActiveTab(index);
+                this.menuPopup.setActiveTab(index, 0);
                 this.menuPopup.open();
             })
         })
+    }
+
+    initDropDowns() {
+        new SlimSelect({
+            select: '.members-select',
+            showSearch: false
+        })
+    }
+
+    inirDatePicker() {
+        const picker = datepicker('.reservation-form__date-picker');
     }
 
     init() {
@@ -105,6 +124,15 @@ export default class {
         this.showMoreInfoForReservationOnClick();
         this.goToReservation();
         this.setMenuButtonsListener();
+        this.createMobileDropDown();
+        this.inirDatePicker();
+        this.initDropDowns();
+
+
+
+        // const mySelects = customSelect('.lol')[0];
+
+
     }
 
 }

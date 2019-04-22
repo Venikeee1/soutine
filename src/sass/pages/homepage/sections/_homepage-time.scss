@@ -41,6 +41,12 @@
         line-height: 1.7;
     }
 
+    &__item-link {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     &__schedule {
         margin-bottom: 2em;
     }

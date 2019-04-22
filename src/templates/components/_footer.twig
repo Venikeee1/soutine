@@ -9,8 +9,8 @@
                         <div class="footer__logo">
                             {{ logo.logo() }}
                         </div>
-                        <a class="footer__tel">{{ homepage.sections.contacts.tel }}</a>
-                        <a href="" class="footer__email">{{ homepage.sections.contacts.email }}</a>
+                        <a href="tel:{{ homepage.sections.contacts.tel }}" class="footer__contacts-link footer__tel">{{ homepage.sections.contacts.tel }}</a>
+                        <a href="mailto:{{ homepage.sections.contacts.email }}" class="footer__contacts-link footer__email">{{ homepage.sections.contacts.email }}</a>
                         <div class="footer__address">{{ homepage.sections.contacts.address }}</div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                         <div class="soutine-properties__title">Our Properties</div>
                         <p class="soutine-properties__description">
                             A collection of restaurants, cafés & brasseries from the restaurateurs Chris Corbin and Jeremy King.
-                            <a href="http://localhost:3000/properties.html">View Portfolio</a>
+                            <a href="/properties.html">View Portfolio</a>
                         </p>
                         <div class="soutine-properties__logos swiper-container">
                             <div class="swiper-wrapper">

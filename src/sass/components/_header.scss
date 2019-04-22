@@ -172,4 +172,8 @@ $burger-breakpoint: 1280px;
             justify-content: center;
         }
     }
+
+    &__burger-btn {
+        display: inline-flex;
+    }
 }

@@ -47,6 +47,7 @@
     "webpack-bundle-analyzer": "^2.11.1"
   },
   "dependencies": {
-    "custom-select": "^1.1.15"
+    "js-datepicker": "^4.0.10",
+    "slim-select": "^1.18.14"
   }
 }

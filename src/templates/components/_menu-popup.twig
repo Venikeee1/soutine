@@ -1,3 +1,5 @@
+{% import "data/homepage.twig" as homepage %}
+
 <section class="menu-popup">
     <div class="menu-popup__header">
         <div class="menu-popup__container container">
@@ -5,15 +7,11 @@
                 {% include "svg/_x.twig" %}
             </button>
             <ul class="menu-popup__list">
-                <li class="menu-popup__item menu-popup__item--active">
-                    <button class="menu-popup__btn">All day menu</button>
-                </li>
-                <li class="menu-popup__item">
-                    <button class="menu-popup__btn">Breakfast menu</button>
-                </li>
-                <li class="menu-popup__item">
-                    <button class="menu-popup__btn">Wine list</button>
-                </li>
+                {% for item in homepage.sections.menu %}
+                    <li class="menu-popup__item">
+                        <button class="menu-popup__btn">{{ item.tab }}</button>
+                    </li>
+                {% endfor %}
             </ul>
             <button class="menu-popup__icon menu-popup__download">
                 {% include "svg/_download.twig" %}
@@ -21,17 +19,24 @@
         </div>
     </div>
     <div class="menu-popup__container container">
-        <section class=" menu-popup__gallery swiper-container">
+        <section class="menu-popup__gallery swiper-container">
+            <div class="menu-popup__mobile-dropdown mobile-select">
+                <button class="mobile-select__current-val">
+                    <span class="mobile-select__main">{{  homepage.sections.menu[0].tab }}</span>
+                    <span class="mobile-select__icon arrow-icon">{% include "svg/_tab-arrow-down.twig" %}</span>
+                </button>
+                <ul class="mobile-select__list">
+                    {% for item in homepage.sections.menu %}
+                        <li class="mobile-select__item">{{ item.tab }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="./img/menu/menu.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./img/menu/menu.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./img/menu/menu.jpg" alt="">
-                </div>
+                {% for item in homepage.sections.menu %}
+                    <div class="swiper-slide">
+                        <img src="./img/menu/menu.jpg" alt="">
+                    </div>
+                {% endfor %}
             </div>
         </section>
     </div>

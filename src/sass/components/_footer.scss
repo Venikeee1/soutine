@@ -124,6 +124,12 @@
         }
     }
 
+    &__contacts-link {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     &__tel, &__email {
         display: block;
         margin: 15px 0;

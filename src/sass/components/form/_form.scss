@@ -1,11 +1,12 @@
 .form {
 
   &__input {
+    width: 100%;
     display: block;
     border: none;
-    background: none;
+    background: none !important;
     border-bottom: 2px solid $secondary-color;
-    padding: 10px 13px;
+    padding: 10px 50px 10px 13px;
     font-size: inherit;
 
     &:last-child {
@@ -30,5 +31,76 @@
     @include mq($sm) {
       height: 100px;
     }
+  }
+
+  &__label {
+    position: relative;
+  }
+
+  &__label-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg {
+      fill: $secondary-color;
+    }
+  }
+
+  .qs-datepicker {
+    margin-top: -3px;
+    width: 100%;
+    border: 2px solid $secondary-color;
+    border-radius: 0%;
+  }
+
+  .qs-controls, .qs-squares {
+    background: $bg-color;
+  }
+
+  .qs-controls {
+    padding: 20px 15px;
+  }
+
+  .qs-datepicker {
+    color: $secondary-color;
+
+    .qs-month-year {
+      font-family: $brand-font-1;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      pointer-events: none;
+    }
+
+    .qs-square {
+      height: 40px;
+      border-radius: 0%;
+      font-family: $brand-font-1;
+      font-size: 14px;
+
+      &.qs-day {
+        font-family: $brand-font-1;
+        color: rgba($secondary-color, 0.4);
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+
+      &.qs-active {
+        background: rgba($secondary-color, 0.3) !important;
+      }
+
+      &:hover {
+        background: rgba($secondary-color, 0.1) !important;
+      }
+    }
+  }
+}
+
+.icon-arrow-down {
+  svg {
+    width: 18px;
   }
 }

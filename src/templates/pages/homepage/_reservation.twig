@@ -17,10 +17,28 @@
                                 <p class="body-1">{{ homepage.sections.reservation.details }}</p>
                             </div>
                         </div>
-                        <form class="reservation-form">
-                            <input type="text" class="reservation-form__item form__input" placeholder="Select a date*">
-                            <input type="text" class="reservation-form__item form__input" placeholder="Time*">
-                            <input type="text" class="reservation-form__item form__input" placeholder="N of people*">
+                        <form class="reservation-form form">
+                            <label class="reservation-form__item form__label">
+                                <input type="text" class="reservation-form__date-picker form__input" placeholder="Select a date*">
+                                <span class="form__label-icon icon">{% include "svg/_calendar.twig" %}</span>
+                            </label>
+                            <label class="reservation-form__item form__label">
+                                <input type="text" class="form__input" placeholder="Time*">
+                                <span class="form__label-icon icon icon-arrow-down">{% include "svg/_tab-arrow-down.twig" %}</span>
+                            </label>
+                            <label class="reservation-form__item form__label">
+                                {#<input type="text" class="form__input" placeholder="">#}
+                                <select type="text" class="members-select">
+                                    <option data-placeholder="true">N of people*</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                                <span class="form__label-icon icon icon-arrow-down">{% include "svg/_tab-arrow-down.twig" %}</span>
+                            </label>
                             <div class="reservation-form__item reservation-form__btn border-decoration">
                                 <div class="border-decoration__elem border-decoration__elem--left"></div>
                                     <button class="btn" type="submit">{{ homepage.sections.reservation.button }}</button>

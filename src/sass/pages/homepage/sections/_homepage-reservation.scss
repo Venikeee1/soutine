@@ -124,4 +124,51 @@
     &__btn {
         margin-top: 30px;
     }
+
+    // custom select style for soutine theme
+
+    .ss-single-selected {
+        background: none;
+        border: none;
+        border-bottom: 2px solid $secondary-color;
+        padding: 10px 50px 10px 13px;
+        height: auto;
+        border-radius: 0%;
+        font-size: 18px;
+
+        .ss-disabled {
+            background: none !important;
+            font-size: 14px;
+        }
+    }
+
+    .custom-select-opener {
+        text-align: left;
+        background: none;
+        border-bottom: 2px solid $secondary-color;
+        font-size: 14px;
+    }
+
+    .ss-arrow {
+        display: none !important;
+    }
+
+    .ss-content {
+        margin-top: -2px;
+        background: $primary-color;
+        border: 2px solid $secondary-color;
+
+        .ss-list .ss-option {
+            &:hover {
+                background: rgba($secondary-color, 0.1);
+                color: $secondary-color;
+            }
+        }
+    }
+
+    .ss-disabled {
+        background: rgba($secondary-color, 0.3) !important;
+        color: $secondary-color !important;
+    }
+
 }
