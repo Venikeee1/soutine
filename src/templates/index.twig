@@ -1,5 +1,6 @@
 ---
 title: Soutine
+header: true
 ---
 
 {% extends 'layouts/_layuot.twig' %}
@@ -8,13 +9,11 @@ title: Soutine
     {% include "components/_preloader.twig" %}
 
     <main class="homepage" data-page="homepage">
-        {% include "components/_header.twig" %}
         {% include "pages/homepage/_intro.twig" %}
         {% include "pages/homepage/_menu.twig" %}
         {% include "pages/homepage/_reservation.twig" %}
         {% include "pages/homepage/_time.twig" %}
 
-        {% include "components/_footer.twig" %}
         {% include "components/_menu-popup.twig" %}
     </main>
 {% endblock %}

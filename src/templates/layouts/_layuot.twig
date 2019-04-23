@@ -12,7 +12,14 @@
 </head>
 <body>
 
+{% if header %}
+  {% include "components/_header.twig" %}
+{% endif %}
+
 {% block content %}{% endblock %}
+
+{% include "components/_footer.twig" %}
+
 
 <script type="text/javascript" src="js/app.js"></script>
 
