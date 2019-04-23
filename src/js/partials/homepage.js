@@ -111,6 +111,11 @@ export default class {
             select: '.members-select',
             showSearch: false
         })
+
+        new SlimSelect({
+            select: '.time-select',
+            showSearch: false
+        })
     }
 
     inirDatePicker() {
@@ -131,7 +136,7 @@ export default class {
 
 
         // const mySelects = customSelect('.lol')[0];
-
+        // ava ./src/tests/unit/components/auth/LoginForm.test.js
 
     }
 
