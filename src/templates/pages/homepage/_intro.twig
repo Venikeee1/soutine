@@ -5,9 +5,11 @@
         <figure class="homepage-intro__img">
             <img src="./img/intro.jpg" alt="">
         </figure>
-        <div class="homepage-intro__text">
-            <h1 class="homepage-intro__title primary-title">{{ homepage.sections.intro.title }}</h1>
-            <p class="homepage-intro__description body-1">{{ homepage.sections.intro.description }}</p>
+        <div class="homepage-intro__text text-center">
+            <div class="cms-container">
+                <h1>{{ homepage.sections.intro.title }}</h1>
+                <p>{{ homepage.sections.intro.description }}</p>
+            </div>
             <div class="homepage-intro__spacer">
                 {% include "svg/_spacer.twig" %}
             </div>

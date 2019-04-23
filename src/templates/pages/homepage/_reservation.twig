@@ -23,19 +23,25 @@
                                 <span class="form__label-icon icon">{% include "svg/_calendar.twig" %}</span>
                             </label>
                             <label class="reservation-form__item form__label">
-                                <input type="text" class="form__input" placeholder="Time*">
+                                {#<input type="text" class="form__input" placeholder="Time*">#}
+                                <select type="text" class="time-select">
+                                    <option data-placeholder="true">Time*</option>
+                                    <option value="1">Breakfast</option>
+                                    <option value="2">Lunch</option>
+                                    <option value="3">Dinner</option>
+                                </select>
                                 <span class="form__label-icon icon icon-arrow-down">{% include "svg/_tab-arrow-down.twig" %}</span>
                             </label>
                             <label class="reservation-form__item form__label">
                                 {#<input type="text" class="form__input" placeholder="">#}
                                 <select type="text" class="members-select">
                                     <option data-placeholder="true">N of people*</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
+                                    <option value="1">1 person</option>
+                                    <option value="2">2 people</option>
+                                    <option value="3">3 people</option>
+                                    <option value="4">4 people</option>
+                                    <option value="5">5 people</option>
+                                    <option value="6">6 people</option>
                                 </select>
                                 <span class="form__label-icon icon icon-arrow-down">{% include "svg/_tab-arrow-down.twig" %}</span>
                             </label>

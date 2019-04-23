@@ -132,12 +132,6 @@ export default class {
         this.createMobileDropDown();
         this.inirDatePicker();
         this.initDropDowns();
-
-
-
-        // const mySelects = customSelect('.lol')[0];
-        // ava ./src/tests/unit/components/auth/LoginForm.test.js
-
     }
 
 }
