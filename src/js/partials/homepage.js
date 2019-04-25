@@ -27,7 +27,10 @@ export default class {
         this.textSlider = new Swiper(this.textSliderContainer, {
             speed: 900,
             allowTouchMove: false,
-            //effect: 'fade'
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            }
         });
 
         const tabs = document.querySelectorAll('.homepage-menu__tab');
@@ -46,7 +49,10 @@ export default class {
     addMenuSlider() {
         const mySwiper = new Swiper(this.menuSlider, {
             speed: 800,
-            spaceBetween: 100,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
             dots: true,
             on: {
                 slideChange: () => {

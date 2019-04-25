@@ -1,0 +1,138 @@
+.available-hours {
+  width: 100%;
+  max-width: 410px;
+  margin: 0 auto;
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__description {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 12px 60px;
+  }
+
+  &__item {
+    width: 25%;
+    padding: 0 12px;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    font-family: $brand-font-1;
+    margin-bottom: 15px;
+  }
+
+  &__btn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border: 2px solid $border-color;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba($secondary-color, 0.2);
+      transition: background-color 0.4s;
+    }
+  }
+
+  &__submit {
+    display: block;
+    margin: 0 auto;
+    max-width: 280px;
+  }
+}
+
+.confirm-form {
+
+  &__submit {
+    max-width: 280px;
+  }
+
+  &__description {
+    margin-bottom: 30px;
+  }
+
+
+  &__search-again {
+    position: relative;
+    margin-top: 15px;
+    padding: 4px 0;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $secondary-color;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__label {
+    width: 47%;
+    margin-bottom: 50px;
+  }
+
+  &__textarea {
+    margin-bottom: 30px;
+    height: 50px;
+  }
+
+  &__submit {
+    margin: 50px auto 0;
+  }
+}
+
+.success-popup {
+
+  &__title {
+    margin-bottom: 35px;
+    font-family: $brand-font-2;
+    font-size: 26px;
+    letter-spacing: 0.02em;
+    line-height: 1.45;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    max-width: 180px;
+    margin: 0 auto 35px;
+  }
+
+  &__hint {
+    line-height: 1.625;
+    margin: 0 auto 50px;
+    max-width: 650px;
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      width: 100%;
+      height: 1px;
+      background: $secondary-color;
+      right: 20px;
+    }
+  }
+}

@@ -14,7 +14,10 @@ export default class {
         this.sliderSettings = {
             speed: 800,
             allowTouchMove: false,
-            //effect: 'fade'
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            }
         }
     }
 

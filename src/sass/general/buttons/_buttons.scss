@@ -12,4 +12,8 @@
   @include mq($md) {
     font-size: 18px;
   }
+
+  &--default {
+    max-width: 280px;
+  }
 }

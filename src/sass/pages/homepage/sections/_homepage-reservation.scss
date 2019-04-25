@@ -47,8 +47,8 @@
 
     &__icon {
         position: relative;
-        width: 24px;
-        height: 24px;
+        width: 23px;
+        height: 23px;
         border: 1px solid $secondary-color;
         border-radius: 50%;
         text-align: center;
@@ -69,13 +69,13 @@
         }
 
         &::before {
-            height: 12px;
-            width: 2px;
+            height: 11px;
+            width: 1px;
         }
 
         &::after {
-            height: 2px;
-            width: 12px;
+            height: 1px;
+            width: 11px;
         }
     }
 

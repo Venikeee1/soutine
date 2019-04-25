@@ -1,9 +1,14 @@
+import axios from "axios";
+
 export default class {
     constructor() {
         this.minuteArrow = document.querySelector('.custom-clock__minute');
         this.hourArrow = document.querySelector('.custom-clock__hour');
         this.minutesAngle = this.getMinuteArrowAngle();
         this.hourAngle = this.getHourArrowAngle();
+        this.startTime = null;
+        this.currentTime = null;
+        this.userTimeDifference = 0;
     }
 
     setRotation(elem, angle) {
@@ -11,7 +16,7 @@ export default class {
     }
 
     getMinuteArrowAngle() {
-        const date = new Date();
+        const date = new Date(this.currentTime);
         const minutes = date.getMinutes();
         const ratio = 360 / 60;
 
@@ -19,7 +24,7 @@ export default class {
     }
 
     getHourArrowAngle() {
-        const date = new Date();
+        const date = new Date(this.currentTime);
         const minutes = date.getMinutes();
         const hours = date.getHours();
         const ratio = 360 / 60 / 12;
@@ -42,6 +47,8 @@ export default class {
 
     moveHourArrow () {
         requestAnimationFrame( ()=> {
+            const userTime = new Date();
+            this.currentTime = userTime.getTime() + this.userTimeDifference;
             const angle = this.getHourArrowAngle();
 
             if(this.hourAngle !== angle) {
@@ -57,5 +64,16 @@ export default class {
         this.setRotation(this.hourArrow, this.hourAngle);
         this.moveMinuteArrow();
         this.moveHourArrow();
+
+        axios.get('/time.php')
+            .then(response => {
+
+                const londonTime = response.data.substring(0, response.data.indexOf('+'));
+                const userDate = new Date();
+                this.startTime = new Date(londonTime);
+
+                this.userTimeDifference = this.startTime.getTime() - userDate.getTime();
+                console.log(this.startTime)
+            })
     }
 }
