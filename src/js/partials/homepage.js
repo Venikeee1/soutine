@@ -1,8 +1,7 @@
 import Swiper from "swiper";
 import MenuPopupInstance from './menu-popup';
 import Dropdown from './customDropdown';
-import datepicker from 'js-datepicker';
-import SlimSelect from 'slim-select'
+import BookingForm from './booking'
 import {TweenLite} from "gsap/TweenLite";
 
 export default class {
@@ -13,6 +12,7 @@ export default class {
         this.showMoreBtn = document.querySelector('.homepage-reservation__more-btn');
         this.showMoreText  = document.querySelector('.homepage-reservation__details');
         this.menuPopup = new MenuPopupInstance();
+        this.booking = new BookingForm();
     }
 
     goToReservation() {
@@ -112,22 +112,6 @@ export default class {
         })
     }
 
-    initDropDowns() {
-        new SlimSelect({
-            select: '.members-select',
-            showSearch: false
-        })
-
-        new SlimSelect({
-            select: '.time-select',
-            showSearch: false
-        })
-    }
-
-    inirDatePicker() {
-        const picker = datepicker('.reservation-form__date-picker');
-    }
-
     init() {
         this.menuPopup.init();
         this.addMenuSlider();
@@ -136,8 +120,7 @@ export default class {
         this.goToReservation();
         this.setMenuButtonsListener();
         this.createMobileDropDown();
-        this.inirDatePicker();
-        this.initDropDowns();
+        this.booking.init();
     }
 
 }

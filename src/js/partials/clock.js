@@ -65,15 +65,15 @@ export default class {
         this.moveMinuteArrow();
         this.moveHourArrow();
 
-        axios.get('/time.php')
-            .then(response => {
-
-                const londonTime = response.data.substring(0, response.data.indexOf('+'));
-                const userDate = new Date();
-                this.startTime = new Date(londonTime);
-
-                this.userTimeDifference = this.startTime.getTime() - userDate.getTime();
-                console.log(this.startTime)
-            })
+        // axios.get('/time.php')
+        //     .then(response => {
+        //
+        //         const londonTime = response.data.substring(0, response.data.indexOf('+'));
+        //         const userDate = new Date();
+        //         this.startTime = new Date(londonTime);
+        //
+        //         this.userTimeDifference = this.startTime.getTime() - userDate.getTime();
+        //         console.log(this.startTime)
+        //     })
     }
 }

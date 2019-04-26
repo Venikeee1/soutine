@@ -2,6 +2,10 @@
     background: url(../img/patern.png) 50% 50%;
     background-size: cover;
 
+    .swiper-container {
+        overflow: visible;
+    }
+
     &__inner {
         min-height: 600px;
         padding: 130px 0;

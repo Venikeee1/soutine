@@ -6,53 +6,64 @@
             <div class=" card card--default">
                 <div class="card__inner">
                     <div class="homepage-reservation__card text-center">
-                        <h2 class="primary-title">{{ homepage.sections.reservation.title }}</h2>
-                        <p class="homepage-reservation__description body-1">{{ homepage.sections.reservation.description }}</p>
-                        <div class="homepage-reservation__more">
-                            <button class="homepage-reservation__more-btn subtitle">
-                                {{ homepage.sections.reservation.viewMore }}
-                                <span class="homepage-reservation__icon icon"></span>
-                            </button>
-                            <div class="homepage-reservation__details primary-border">
-                                <p class="body-1">{{ homepage.sections.reservation.details }}</p>
+                        <div class="booking-form swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h2 class="primary-title">{{ homepage.sections.reservation.title }}</h2>
+                                    <p class="homepage-reservation__description body-1">{{ homepage.sections.reservation.description }}</p>
+                                    <div class="homepage-reservation__more">
+                                        <button class="homepage-reservation__more-btn subtitle">
+                                            {{ homepage.sections.reservation.viewMore }}
+                                            <span class="homepage-reservation__icon icon"></span>
+                                        </button>
+                                        <div class="homepage-reservation__details primary-border">
+                                            <p class="body-1">{{ homepage.sections.reservation.details }}</p>
+                                        </div>
+                                    </div>
+                                    <form class="reservation-form form">
+                                        <label class="reservation-form__item form__label">
+                                            <input type="text" class="reservation-form__date-picker form__input" placeholder="Select a date*">
+                                            <span class="form__label-icon icon">{% include "svg/_calendar.twig" %}</span>
+                                        </label>
+                                        <label class="reservation-form__item form__label">
+                                            <select type="text" class="time-select">
+                                                <option data-placeholder="true">Time*</option>
+                                                <option value="1">Breakfast</option>
+                                                <option value="2">Lunch</option>
+                                                <option value="3">Dinner</option>
+                                            </select>
+                                            <span class="form__label-icon icon icon-arrow-down">{% include "svg/_tab-arrow-down.twig" %}</span>
+                                        </label>
+                                        <label class="reservation-form__item form__label">
+                                            <select type="text" class="members-select">
+                                                <option data-placeholder="true">N of people*</option>
+                                                <option value="1">1 person</option>
+                                                <option value="2">2 people</option>
+                                                <option value="3">3 people</option>
+                                                <option value="4">4 people</option>
+                                                <option value="5">5 people</option>
+                                                <option value="6">6 people</option>
+                                            </select>
+                                            <span class="form__label-icon icon icon-arrow-down">{% include "svg/_tab-arrow-down.twig" %}</span>
+                                        </label>
+                                        <div class="reservation-form__item reservation-form__btn border-decoration">
+                                            <div class="border-decoration__elem border-decoration__elem--left"></div>
+                                            <button class="btn" type="submit">{{ homepage.sections.reservation.button }}</button>
+                                            <div class="border-decoration__elem border-decoration__elem--right"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="swiper-slide">
+                                    {% include "components/forms/_available-hours.twig" %}
+                                </div>
+                                <div class="swiper-slide">
+                                    {% include "components/forms/_confirm-form.twig" %}
+                                </div>
+                                <div class="swiper-slide">
+                                    {% include "components/forms/_success-popup.twig" %}
+                                </div>
                             </div>
                         </div>
-                        <form class="reservation-form form">
-                            <label class="reservation-form__item form__label">
-                                <input type="text" class="reservation-form__date-picker form__input" placeholder="Select a date*">
-                                <span class="form__label-icon icon">{% include "svg/_calendar.twig" %}</span>
-                            </label>
-                            <label class="reservation-form__item form__label">
-                                {#<input type="text" class="form__input" placeholder="Time*">#}
-                                <select type="text" class="time-select">
-                                    <option data-placeholder="true">Time*</option>
-                                    <option value="1">Breakfast</option>
-                                    <option value="2">Lunch</option>
-                                    <option value="3">Dinner</option>
-                                </select>
-                                <span class="form__label-icon icon icon-arrow-down">{% include "svg/_tab-arrow-down.twig" %}</span>
-                            </label>
-                            <label class="reservation-form__item form__label">
-                                {#<input type="text" class="form__input" placeholder="">#}
-                                <select type="text" class="members-select">
-                                    <option data-placeholder="true">N of people*</option>
-                                    <option value="1">1 person</option>
-                                    <option value="2">2 people</option>
-                                    <option value="3">3 people</option>
-                                    <option value="4">4 people</option>
-                                    <option value="5">5 people</option>
-                                    <option value="6">6 people</option>
-                                </select>
-                                <span class="form__label-icon icon icon-arrow-down">{% include "svg/_tab-arrow-down.twig" %}</span>
-                            </label>
-                            <div class="reservation-form__item reservation-form__btn border-decoration">
-                                <div class="border-decoration__elem border-decoration__elem--left"></div>
-                                    <button class="btn" type="submit">{{ homepage.sections.reservation.button }}</button>
-                                <div class="border-decoration__elem border-decoration__elem--right"></div>
-                            </div>
-                        </form>
-                        {% include "components/forms/_available-hours.twig" %}
-
                     </div>
                 </div>
             </div>

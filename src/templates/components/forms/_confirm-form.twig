@@ -1,0 +1,36 @@
+<div class="confirm-form__wrapper">
+    <h2 class="primary-title">{{ homepage.sections.reservation.title }}</h2>
+    <div class="confirm-form__description body-1">
+        The following times are available for
+        <span class="available-hours__persons text-bold">2 people</span>
+        for <span class="available-hours__menu text-bold">Breakfast</span>
+        on <span class="available-hours__time text-bold">Monday 18th March</span>
+    </div>
+    <form class="confirm-form">
+        <div class="confirm-form__inputs">
+            <label class="confirm-form__label form__label">
+                <input required type="text" class="reservation-form__date-picker form__input" placeholder="First Name*">
+            </label>
+            <label class="confirm-form__label form__label">
+                <input required type="text" class="reservation-form__date-picker form__input" placeholder="Last Name*">
+            </label>
+            <label class="confirm-form__label form__label">
+                <input required type="text" class="reservation-form__date-picker form__input" placeholder="Email*">
+            </label>
+            <label class="confirm-form__label form__label">
+                <input required type="text" class="reservation-form__date-picker form__input" placeholder="Phone*">
+            </label>
+        </div>
+        <textarea class="confirm-form__textarea form__input" name="" id="" cols="30" rows="10" placeholder="Special instructions"></textarea>
+        <label class="form__checkbox-label">
+            <input class="hidden-checkbox" type="checkbox" required>
+            Corbin & King may occasionally contact me with updates and special offers.
+        </label>
+        <div class="confirm-form__submit btn--default m-auto border-decoration">
+            <div class="border-decoration__elem border-decoration__elem--left"></div>
+            <button class="btn" type="submit">Confirm booking</button>
+            <div class="border-decoration__elem border-decoration__elem--right"></div>
+        </div>
+        <button class="confirm-form__search-again">Search again</button>
+    </form>
+</div>

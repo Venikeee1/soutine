@@ -1,0 +1,50 @@
+.confirm-form {
+
+    &__submit {
+        max-width: 280px;
+    }
+
+    &__description {
+        margin-bottom: 30px;
+    }
+
+
+    &__search-again {
+        position: relative;
+        margin-top: 15px;
+        padding: 4px 0;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: $secondary-color;
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__label {
+        width: 47%;
+        margin-bottom: 50px;
+    }
+
+    &__textarea {
+        margin-bottom: 30px;
+        height: 50px;
+    }
+
+    &__submit {
+        margin: 50px auto 0;
+    }
+}
