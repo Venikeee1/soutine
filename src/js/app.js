@@ -15,7 +15,6 @@ window.addEventListener('load', () => {
     const Footer = new FooterInstance();
     const Preloader = new PreloaderInstance();
     const CustomClock = new Clock();
-    const Homepage = new HomepageInstance();
     const TermsConditions = new TermsConditionsInstance();
 
     Footer.init();
@@ -24,6 +23,7 @@ window.addEventListener('load', () => {
     const pageType = document.querySelector('[data-page]').getAttribute('data-page')
 
     if (pageType === 'homepage') {
+        const Homepage = new HomepageInstance();
         Header.init();
         Homepage.init();
         CustomClock.init();

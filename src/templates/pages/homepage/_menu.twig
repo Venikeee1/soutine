@@ -34,8 +34,10 @@
                             {% for item in homepage.sections.menu %}
                                 <div class="homepage-menu__item swiper-slide">
                                     <div class="homepage-menu__info">{{ item.info }}</div>
-                                    <h2 class="homepage-menu__title primary-title">{{ item.title }}</h2>
-                                    <p class="homepage-intro__description body-2">{{ item.description }}</p>
+                                    <h2 class="homepage-menu__title secondary-title">{{ item.title }}</h2>
+                                    <div class="cms-container homepage-menu__description body-2">
+                                        <p>{{ item.description }}</p>
+                                    </div>
                                     <div class="homepage-intro__spacer">
                                         {% include "svg/_spacer.twig" %}
                                     </div>

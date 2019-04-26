@@ -3,6 +3,8 @@ body, html {
   font-weight: 500;
   font-size: 18px;
   color: $secondary-color;
+  -webkit-font-smoothing: antialiased;
+  background: $primary-color;
 }
 
 input, textarea {

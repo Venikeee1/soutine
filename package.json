@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "js-datepicker": "^4.0.10",
+    "query-string": "^6.4.2",
     "slim-select": "^1.18.14"
   }
 }

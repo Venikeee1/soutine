@@ -4,8 +4,8 @@
     padding: 0 30px;
 
     &--bordered {
-        border-right: 3px solid $secondary-color;
-        border-left: 3px solid $secondary-color;
+        border-right: 2px solid $secondary-color;
+        border-left: 2px solid $secondary-color;
         width: 90%;
 
         @include mq($lg) {
@@ -18,8 +18,8 @@
 .bordered-container {
     max-width: 1340px;
     margin: 0 auto;
-    border-right: 3px solid $secondary-color;
-    border-left: 3px solid $secondary-color;
+    border-right: 2px solid $secondary-color;
+    border-left: 2px solid $secondary-color;
     width: 90%;
 
     @include mq($lg) {

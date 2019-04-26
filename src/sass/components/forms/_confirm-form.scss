@@ -8,7 +8,6 @@
         margin-bottom: 30px;
     }
 
-
     &__search-again {
         position: relative;
         margin-top: 15px;
@@ -37,6 +36,11 @@
     &__label {
         width: 47%;
         margin-bottom: 50px;
+
+        @include mq($md) {
+            min-width: 100%;
+            margin-bottom: 30px;
+        }
     }
 
     &__textarea {

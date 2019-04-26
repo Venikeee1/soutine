@@ -19,6 +19,14 @@
     letter-spacing: 0.03em;
 }
 
+.secondary-title {
+    font-size: 26px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-family: $brand-font-2;
+    letter-spacing: 0.03em;
+}
+
 .subtitle {
     font-size: 18px;
     line-height: 1.22;
@@ -75,5 +83,6 @@
         letter-spacing: .03em;
         line-height: 1.625;
         margin: 1em auto;
+        font-weight: 200;
     }
 }

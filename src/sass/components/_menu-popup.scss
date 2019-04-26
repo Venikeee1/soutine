@@ -1,12 +1,13 @@
 .menu-popup {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: $bg-color;
     height: 100%;
-    overflow: auto;
-    padding-bottom: 60px;
+    overflow: hidden;
     opacity: 0;
     z-index: -1;
     pointer-events: none;
@@ -18,12 +19,17 @@
 
     &__container {
         position: relative;
-        max-width: 860px;
 
-        @include mq($md) {
+        @include mq($xl) {
             display: flex;
             justify-content: space-between;
         }
+    }
+
+    &__scroll {
+        height: 100%;
+        overflow: auto;
+        padding-bottom: 60px;
     }
 
     &__list {
@@ -32,7 +38,7 @@
         font-family: $brand-font-2;
         padding: 0 40px;
 
-        @include mq($md) {
+        @include mq($xl) {
             display: none;
         }
     }
@@ -66,6 +72,12 @@
         }
     }
 
+    &__mobile-dropdown {
+        @include mq($xl) {
+            display: block;
+        }
+    }
+
     &__gallery {
         margin: 40px auto 0;
     }
@@ -80,7 +92,7 @@
         transform: translateY(-50%);
         cursor: pointer;
 
-        @include mq($md) {
+        @include mq($xl) {
             position: relative;
             transform: translateY(0);
             top: 0;
@@ -98,7 +110,7 @@
         transform: translateY(-50%);
         cursor: pointer;
 
-        @include mq($md) {
+        @include mq($xl) {
             position: relative;
             transform: translateY(0);
             top: 0;

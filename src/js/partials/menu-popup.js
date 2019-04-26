@@ -50,7 +50,7 @@ export default class {
 
         this.timeline
             .to(this.el, 0, {scale: 0.5})
-            .to(this.el, 0.3, { scale: 1, opacity: 1, zIndex: 1000, pointerEvents: 'auto'})
+            .to(this.el, 0.3, { scale: 1, opacity: 1, zIndex: 10000, pointerEvents: 'auto'})
     }
 
     close() {

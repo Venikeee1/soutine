@@ -25,13 +25,18 @@
     font-family: $brand-font-2;
   }
 
+  &__description {
+    max-width: 620px;
+    margin: 0 auto 30px;
+  }
+
   &__tab {
-    width: 33.333%;
+    flex: 1;
     cursor: pointer;
     font-size: 22px;
     text-transform: uppercase;
     color: rgba($secondary-color, 0.4);
-    border-right: 2px solid rgba($secondary-color,0.2);
+    border-right: 2px solid $border-color;
     transition: color 0.3s;
 
     &:last-child {
@@ -59,10 +64,6 @@
   &__show-menu {
     display: inline-block;
     max-width: 190px;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }
 

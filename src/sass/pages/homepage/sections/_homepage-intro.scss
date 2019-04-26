@@ -17,7 +17,7 @@
 
   &__title {
     margin: 25px auto 20px;
-    max-width: 290px;
+    max-width: 500px;
   }
 
   &__description {
@@ -33,10 +33,6 @@
     margin: 0 auto;
     max-width: 170px;
     cursor: pointer;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
 }

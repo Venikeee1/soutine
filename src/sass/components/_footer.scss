@@ -16,8 +16,8 @@
     }
 
     &__info {
-        border-top: 2px solid rgba($secondary-color, 0.2);
-        border-bottom: 2px solid rgba($secondary-color, 0.2);
+        border-top: 2px solid $border-color ;
+        border-bottom: 2px solid $border-color  ;
     }
 
     &__list {
@@ -126,9 +126,7 @@
     }
 
     &__contacts-link {
-        &:hover {
-            text-decoration: underline;
-        }
+
     }
 
     &__tel, &__email {
@@ -288,6 +286,10 @@
         display: inline-block;
         width: 75px;
         margin-top: 20px;
+
+        .swiper-wrapper {
+            align-items: center;
+        }
     }
 
     &__description {

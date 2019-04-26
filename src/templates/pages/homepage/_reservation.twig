@@ -3,9 +3,17 @@
 <section class="homepage-reservation" id="reservation" data-section="reservation">
     <div class="container container--bordered">
         <div class="homepage-reservation__inner">
-            <div class=" card card--default">
+            <div class="card card--default">
                 <div class="card__inner">
                     <div class="homepage-reservation__card text-center">
+                        <div class="form-preloader">
+                            <div class="form-preloader__ellipsis">
+                                <div class="form-preloader__circle"></div>
+                                <div class="form-preloader__circle"></div>
+                                <div class="form-preloader__circle"></div>
+                                <div class="form-preloader__circle"></div>
+                            </div>
+                        </div>
                         <div class="booking-form swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -22,7 +30,7 @@
                                     </div>
                                     <form class="reservation-form form">
                                         <label class="reservation-form__item form__label">
-                                            <input type="text" class="reservation-form__date-picker form__input" placeholder="Select a date*">
+                                            <input type="text" class="reservation-form__date-picker form__input" readonly="readonly" data-lpignore=true placeholder="Select a date*">
                                             <span class="form__label-icon icon">{% include "svg/_calendar.twig" %}</span>
                                         </label>
                                         <label class="reservation-form__item form__label">
@@ -36,7 +44,7 @@
                                         </label>
                                         <label class="reservation-form__item form__label">
                                             <select type="text" class="members-select">
-                                                <option data-placeholder="true">N of people*</option>
+                                                <option data-placeholder="true">Group size*</option>
                                                 <option value="1">1 person</option>
                                                 <option value="2">2 people</option>
                                                 <option value="3">3 people</option>

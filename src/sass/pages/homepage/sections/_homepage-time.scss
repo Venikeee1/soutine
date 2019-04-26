@@ -42,9 +42,7 @@
     }
 
     &__item-link {
-        &:hover {
-            text-decoration: underline;
-        }
+
     }
 
     &__schedule {
@@ -52,7 +50,7 @@
     }
 
     &__clock-description {
-        margin-top: 24px;
+        margin-top: 50px;
         font-size: 22px;
         letter-spacing: 0.02em;
         line-height: 1.3;
@@ -82,46 +80,46 @@
 
 .custom-clock {
     position: relative;
-    width: 230px;
-    height: 230px;
+    margin-top: 50px;
+    width: 150px;
+    height: 150px;
 
     .clock-svg {
-        width: 230px;
-        height: 230px;
+        width: 150px;
+        height: 150px;
     }
 
     &__arrow {
         position: absolute;
         bottom: 50%;
         left: 50%;
-
     }
 
     &__minute {
-        margin-left: -9px;
+        margin-left: -6px;
         margin-bottom: -8px;
-        transform-origin: 50% 97px;
+        transform-origin: 50% 67px;
         transform: rotate(0deg);
         transition: transform 0.9s;
 
         svg {
             display: block;
-            width: 18px;
-            height: 105px;
+            width: 12px;
+            height: 73px;
         }
     }
 
     &__hour {
         margin-bottom: -6px;
-        margin-left: -15px;
+        margin-left: -9px;
         transform: rotate(0deg);
-        transform-origin: 50% 66px;
+        transform-origin: 50% 44px;
         transition: transform 0.9s;
 
         svg {
             display: block;
-            width: 30px;
-            height: 72px;
+            width: 19px;
+            height: 48px;
         }
     }
 }

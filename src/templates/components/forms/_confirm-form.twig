@@ -9,21 +9,21 @@
     <form class="confirm-form">
         <div class="confirm-form__inputs">
             <label class="confirm-form__label form__label">
-                <input required type="text" class="reservation-form__date-picker form__input" placeholder="First Name*">
+                <input required type="text" class="confirm-form__first-name form__input" placeholder="First Name*">
             </label>
             <label class="confirm-form__label form__label">
-                <input required type="text" class="reservation-form__date-picker form__input" placeholder="Last Name*">
+                <input required type="text" class="confirm-form__last-name form__input" placeholder="Last Name*">
             </label>
             <label class="confirm-form__label form__label">
-                <input required type="text" class="reservation-form__date-picker form__input" placeholder="Email*">
+                <input required type="email" class="confirm-form__email form__input" placeholder="Email*">
             </label>
             <label class="confirm-form__label form__label">
-                <input required type="text" class="reservation-form__date-picker form__input" placeholder="Phone*">
+                <input required type="tel" class="confirm-form__tel form__input" placeholder="Phone*">
             </label>
         </div>
         <textarea class="confirm-form__textarea form__input" name="" id="" cols="30" rows="10" placeholder="Special instructions"></textarea>
         <label class="form__checkbox-label">
-            <input class="hidden-checkbox" type="checkbox" required>
+            <input class="special-offers-checkbox hidden-checkbox" type="checkbox">
             Corbin & King may occasionally contact me with updates and special offers.
         </label>
         <div class="confirm-form__submit btn--default m-auto border-decoration">
@@ -31,6 +31,6 @@
             <button class="btn" type="submit">Confirm booking</button>
             <div class="border-decoration__elem border-decoration__elem--right"></div>
         </div>
-        <button class="confirm-form__search-again">Search again</button>
+        <button type="button" class="confirm-form__search-again">Search again</button>
     </form>
 </div>

@@ -1,4 +1,5 @@
 .homepage-reservation {
+    position: relative;
     background: url(../img/patern.png) 50% 50%;
     background-size: cover;
 
@@ -12,6 +13,7 @@
     }
 
     &__card {
+        position: relative;
         padding: 65px 10% 70px;
 
         @include mq($xxl) {
@@ -32,7 +34,7 @@
         max-width: 400px;
         width: 100%;
         background: $bg-color;
-        z-index: 1;
+        z-index: 9999;
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.4s;
@@ -163,10 +165,20 @@
         border: 2px solid $secondary-color;
 
         .ss-list .ss-option {
+            padding: 5px 20px !important;
+            font-size: 18px;
+            letter-spacing: 0.025em;
+            color: $secondary-color;
+
             &:hover {
                 background: rgba($secondary-color, 0.1);
                 color: $secondary-color;
             }
+        }
+
+
+        .ss-list {
+            padding: 15px 0;
         }
     }
 
